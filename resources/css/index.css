@@ -11,14 +11,15 @@
     display: block;
     white-space: nowrap; /* Keeps text from wrapping to next line */
     padding: 20px 25px; /* Adds space around the text for better clickable area */
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .banner_tab a:hover {
     font-weight: bold;
     color: white;
     background-color: #4A4A4A;
-    font-size: larger;
-    transition: background-color 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+    transform: scale(1.1);
 }
 
 .banner_tab a:active {
@@ -34,6 +35,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 10;
+    width: 100%; /* Ensure nav takes full width */
 }
 
 nav li {
@@ -91,8 +93,43 @@ body {
     padding: 0;
 }
 
+.nav-links {
+    display: flex;
+    justify-content: space-around; /* Even spacing on larger screens */
+    list-style: none;
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    width: 100%; /* Nav links take full width */
+}
+
+/* Each nav item grows equally */
+.nav-links li {
+    flex-grow: 1; /* Ensures equal space between links */
+    text-align: center;
+    min-width: 100px;
+    padding: 10px 0;
+    height: 60px;
+    line-height: 60px; /* Align text vertically in the middle */
+    overflow: hidden;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column; /* Stack the items vertically */
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #111111;
+        width: 100%;
+        text-align: center;
+    }
+
     ul {
         flex-direction: column; /* Stack the nav items vertically on small screens */
         align-items: center;
@@ -124,16 +161,25 @@ body {
         font-size: 24px;
     }
 }
-}
 
 img {
     max-width: 100%; /* Image width will not exceed the width of its container */
     height: auto; /* Maintain the aspect ratio */
     display: block; /* Prevent extra space below images */
-    margin: 0 auto; /* Center the image horizontally */
+    margin: 0 2em; /* Center the image horizontally */
 }
 
 @media screen and (min-width: 768px) {
+    .nav-links {
+        display: flex; /* Horizontal layout */
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%; /* Ensure full width */
+    }
+    .nav-links li {
+        flex-grow: 1; /* Equal distribution */
+        text-align: center; /* Keep items centered */
+    }
     img {
         max-width: 80%;
     }
