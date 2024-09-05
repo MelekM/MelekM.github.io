@@ -2,22 +2,82 @@
     font-family: Georgia, Helvetica, sans-serif;
 }
 
+.banner_tab a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    white-space: nowrap; /* Keeps text from wrapping to next line */
+    padding: 20px 25px; /* Adds space around the text for better clickable area */
+}
+
+.banner_tab a:hover {
+    font-weight: bold;
+    color: white;
+    background-color: #4A4A4A;
+    font-size: larger;
+    transition: background-color 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+.banner_tab a:active {
+    color: black;
+    background-color: #2A2A2A;
+}
+
+nav {
+    background-color: #111111;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav li {
+    font-size: 24px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    margin-right: 20px;
+    background-color: #111111;
+    line-height: 30px; /* Vertically centers the text */
+    padding: 0; /* Padding handled by <a> */
+}
 
 h1 {
-    color: SeaGreen;
-    font-weight: bold;
+    color: #2E8B57;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
 }
 
 h2 {
-
+    color: #2F4F4F;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid #4A4A4A;
+    padding-bottom: 5px;
 }
 
-p,
-li {
-    font-size: 18px;
+p, li {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 15px;
 }
-
 
 a {
-    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2E8B57;
+}
+
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
