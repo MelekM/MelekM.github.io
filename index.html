@@ -10,7 +10,8 @@
 
 <body>
     <nav>
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+        <ul class="nav-links">
             <li class="banner_tab"><a href="#index">Home</a></li>
             <li class="banner_tab"><a href="#about">About Me</a></li>
             <li class="banner_tab"><a href="#portfolio">Portfolio</a></li>
@@ -50,7 +51,7 @@
                 dear to my heart, and bringing me a memory of my grandfather all at once.</p>
                 <figure>
                     <img src="./resources/images/SyriaCherry.JPG" alt="Cherries on a tree branch in Jabal al Arab, Syria"/>
-                    <figcaption>Cherries hanging from the tree's branches in Jabal al Arab, Syria.</figcaption>
+                    <figcaption>Cherries hanging from tree branches in Jabal al Arab, Syria.</figcaption>
                 </figure>
             <h2>Languages</h2>
                 <p>Growing up in a bilingual Spanish-Arabic speaking family, I was challenged to learn
@@ -74,4 +75,12 @@
     </div>
 
 </body>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
+
 </html>
