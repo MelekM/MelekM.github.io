@@ -10,14 +10,19 @@
     color: white;
     display: block;
     white-space: nowrap; /* Keeps text from wrapping to next line */
-    padding: 20px 25px; /* Adds space around the text for better clickable area */
-    text-align: center;
+    padding: 15px; /* Adds space around the text for better clickable area */
+    font-size: 1.1rem; /* Slightly larger font size for clarity */
+    /* text-align: center; */
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
+
+
+
 
 .banner_tab a:hover {
     font-weight: bold;
     color: white;
+    font-size: 1.2rem; /* Increase font size on hover */
     background-color: #4A4A4A;
     transform: scale(1.1);
 }
@@ -95,21 +100,31 @@ body {
 
 .nav-links {
     display: flex;
-    justify-content: space-around; /* Even spacing on larger screens */
-    list-style: none;
-    flex-wrap: wrap; /* Allow items to wrap if necessary */
-    width: 100%; /* Nav links take full width */
+    justify-content: space-around; /* Distribute space evenly */
+    align-items: center; /* Align items vertically in the middle */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    width: 100%;
+    margin: 0 auto; /* Center the nav */
+    padding: 0; /* Remove extra padding */
+    overflow: hidden;
 }
 
-/* Each nav item grows equally */
+/* Each nav item grows equally
 .nav-links li {
-    flex-grow: 1; /* Ensures equal space between links */
+    flex-grow: 1;  Ensures equal space between links
     text-align: center;
     min-width: 100px;
     padding: 10px 0;
     height: 60px;
-    line-height: 60px; /* Align text vertically in the middle */
+    line-height: 60px;  Align text vertically in the middle
     overflow: hidden;
+} */
+
+.nav-links li {
+    flex-grow: 0; /* Prevent excessive growth */
+    text-align: center; /* Center text within the items */
+    padding: 10px 15px; /* Adjust padding to create balanced spacing */
+    min-width: 40px; /* Minimum width to prevent too-small items */
 }
 
 .hamburger {
