@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="resources/css/index.css" type="text/css" rel="stylesheet">
+    <script src="resources/js/menu.js"></script>
+</head>
+<body>
+<!-- Navbar (Include here or through a server-side include) -->
+<div data-include="resources/utils/navbar.html"></div>
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h1>Contact Me</h1>
+        <p>If you’d like to get in touch, feel free to drop me a message or find me on social media.</p>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form action="submit-form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+            <ul>
+                <li><strong>Email:</strong> your.email@example.com</li>
+                <li><strong>Phone:</strong> +1 123 456 7890</li>
+                <li><strong>Location:</strong> City, Country</li>
+            </ul>
+
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="#" target="_blank"><img src="resources/images/instagram.png" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="resources/images/linkedin.png" alt="LinkedIn"></a>
+                <a href="#" target="_blank"><img src="resources/images/github.png" alt="GitHub"></a>
+            </div>
+        </div>
+
+        <!-- Map Section (Optional) -->
+        <div class="map-section">
+            <h2>Find Me Here</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.7208655083677!2d-122.419204!3d37.7749299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808ed320bd47%3A0x693a728acdf9240!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1617327801691!5m2!1sen!2sus"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+</section>
+
+<!-- Footer (Include here or through a server-side include) -->
+<footer>
+    <div data-include="resources/utils/footer.html"></div>
+</footer>
+
+</body>
+</html>

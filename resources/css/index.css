@@ -55,7 +55,7 @@ nav li {
 }
 
 h1 {
-    color: #2E8B57;
+    color: #2F4F4F;
     font-weight: 700;
     font-size: 3rem;
     margin-top: 0.5em;
@@ -109,17 +109,6 @@ body {
     overflow: hidden;
 }
 
-/* Each nav item grows equally
-.nav-links li {
-    flex-grow: 1;  Ensures equal space between links
-    text-align: center;
-    min-width: 100px;
-    padding: 10px 0;
-    height: 60px;
-    line-height: 60px;  Align text vertically in the middle
-    overflow: hidden;
-} */
-
 .nav-links li {
     flex-grow: 0; /* Prevent excessive growth */
     text-align: center; /* Center text within the items */
@@ -167,6 +156,9 @@ body {
         padding: 10px;
     }
 
+    img {
+        margin: 10px 20px;
+    }
     /* Style the links for mobile */
     .nav-links li {
         padding: 15px 0;
@@ -182,6 +174,13 @@ img {
     height: auto; /* Maintain the aspect ratio */
     display: block; /* Prevent extra space below images */
     margin: 0 2em; /* Center the image horizontally */
+}
+
+.container {
+    width: 90%; /* Set the content width to 90% of the page width */
+    max-width: 1200px; /* Prevent the content from becoming too wide */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding for better spacing */
 }
 
 @media screen and (min-width: 768px) {
@@ -203,4 +202,13 @@ img {
 figcaption {
     text-align: center;
     color: #2A2A2A;
+}
+
+#profile img {
+    width: 100%;
+    max-width: 300px; /* Ensures the image does not overflow its container */
+    height: auto; /* Maintains the aspect ratio */
+    margin: 0 auto;
+    text-align: center;
+    /* display: block; /* Removes the small gap below images */
 }
