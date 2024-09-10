@@ -1,6 +1,12 @@
 /* Photography page styling */
+#photography h1, h2, h3, h4 {
+    color: #2F4F4F;
+    font-family: Georgia, Helvetica, sans-serif;
+    margin-bottom: 15px;
+}
+
 #photography .region {
-    margin-bottom: 40px;
+    margin: 20px 0;
 }
 
 #photography .country {
@@ -9,16 +15,28 @@
 
 #photography .city {
     margin-left: 40px;
-    margin-bottom: 20px;
 }
 
-#photography figure {
-    text-align: center;
+.gallery {
+    display: inline-block;
+    margin: 10px;
 }
 
-#photography img {
-    width: 100%;
-    max-width: 600px;
+.gallery img {
+    width: 200px; /* Adjust image width for the grid */
     height: auto;
-    margin: 10px 0;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
 }

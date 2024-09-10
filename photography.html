@@ -4,43 +4,52 @@
   <title>Photography</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Include Lightbox CSS -->
+  <link href="resources/css/lightbox.css" rel="stylesheet" />
+
+  <!-- Your custom styles -->
   <link href="resources/css/index.css" type="text/css" rel="stylesheet"/>
   <link href="resources/css/photography.css" type="text/css" rel="stylesheet"/>
-  <script src="resources/js/menu.js"></script>
 </head>
 <body>
+
 <!-- Navbar -->
 <div data-include="resources/utils/navbar.html"></div>
 
 <!-- Photography Section -->
 <section id="photography">
   <h1>Photography</h1>
-  <p>Explore my photography categorized by regions, countries, and cities:</p>
+  <p>Explore some of my favorites. These pictures have been taken by my Nikon D5500 or phone.</p>
 
-  <!-- Region 1: Middle East -->
+  <!-- Region 1 -->
   <div class="region">
-    <h2>Middle East</h2>
+    <h2>North America</h2>
 
-    <!-- Country: Syria -->
+    <!-- Country: United States -->
     <div class="country">
-      <h3>Syria</h3>
+      <h3>United States</h3>
 
-      <!-- City: As-Suwayda -->
+      <!-- City: Orlando -->
       <div class="city">
-        <h4>As-Suwayda</h4>
-        <figure>
-          <img src="resources/images/SyriaCherry.JPG" alt="Cherries in Jabal al Arab, Syria" />
-          <figcaption>Cherries hanging from tree branches in Jabal al Arab, Syria.</figcaption>
-        </figure>
+        <h4>Orlando</h4>
+        <div class="gallery">
+          <a href="resources/images/SyriaCherry.JPG" data-lightbox="orlando" data-title="Cherries in Orlando">
+            <img src="resources/images/SyriaCherry.JPG" alt="Cherries in Orlando" />
+          </a>
+          <figcaption>Cherries in Orlando, USA.</figcaption>
+        </div>
       </div>
 
       <!-- City: Damascus -->
       <div class="city">
         <h4>Damascus</h4>
-        <figure>
-          <img src="resources/images/DamascusStreet.JPG" alt="Street in Damascus" />
-          <figcaption>A historic street in Damascus.</figcaption>
-        </figure>
+        <div class="gallery">
+          <a href="resources/images/DamascusStreet.JPG" data-lightbox="damascus" data-title="Street in Damascus">
+            <img src="resources/images/DamascusStreet.JPG" alt="Street in Damascus" />
+          </a>
+          <figcaption>A street in Damascus, Syria.</figcaption>
+        </div>
       </div>
     </div>
 
@@ -51,6 +60,24 @@
       <!-- City: Petra -->
       <div class="city">
         <h4>Petra</h4>
-        <figure>
-          <img src="resources/images/Petra.JPG" alt="Petra in Jordan" />
-          <figcaption>The ancient city of Petra in Jordan
+        <div class="gallery">
+          <a href="resources/images/Petra.JPG" data-lightbox="petra" data-title="Petra in Jordan">
+            <img src="resources/images/Petra.JPG" alt="Petra in Jordan" />
+          </a>
+          <figcaption>The ancient city of Petra, Jordan.</figcaption>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div data-include="resources/utils/footer.html"></div>
+</footer>
+
+<!-- Include Lightbox JS -->
+<script src="resources/js/lightbox.js"></script>
+
+</body>
+</html>
