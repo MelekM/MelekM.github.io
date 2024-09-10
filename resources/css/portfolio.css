@@ -1,0 +1,14 @@
+/* Portfolio page styling */
+#portfolio .project {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+#portfolio .project h2 {
+    margin-bottom: 10px;
+}
+
+#portfolio .project a {
+    color: #1e90ff;
+    text-decoration: none;
+}

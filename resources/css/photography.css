@@ -1,0 +1,24 @@
+/* Photography page styling */
+#photography .region {
+    margin-bottom: 40px;
+}
+
+#photography .country {
+    margin-left: 20px;
+}
+
+#photography .city {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+#photography figure {
+    text-align: center;
+}
+
+#photography img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 10px 0;
+}

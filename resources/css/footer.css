@@ -1,0 +1,32 @@
+/* Footer styling */
+footer {
+    background-color: #111111;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    font-family: Georgia, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 5px;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: white; /* Matches the hover color in navbar */
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #2E8B57; /* Matches hover style */
+}
