@@ -1,0 +1,11 @@
+.social-media img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.social-media a {
+    display: inline-block;
+    padding: 5px;
+}

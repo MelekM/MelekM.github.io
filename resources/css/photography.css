@@ -36,7 +36,8 @@
 
 figcaption {
     text-align: center;
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 5px;
+    color: #2A2A2A;
+    max-width: 15rem;
+    word-wrap: break-word;
+    white-space: normal;
 }
