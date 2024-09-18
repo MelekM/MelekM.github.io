@@ -7,89 +7,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="resources/css/index.css" type="text/css" rel="stylesheet"/>
     <script src="resources/js/menu.js"></script>
+
+    <!-- DM Serif Display, and Playfair Display Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 <!-- Navbar (Include here or through a server-side include) -->
 <div data-include="resources/utils/navbar.html"></div>
-<!-- Home Section -->
 
+<!-- Hero Section -->
 <section id="hero" class="hero">
     <div class="hero-content">
         <h1>Melek Mizher</h1>
-        <p>Technology Enthusiast | Photographer | Polyglot</p>
+        <p>Data Scientist | AI Enthusiast | Photographer | Polyglot</p>
     </div>
 </section>
 
-
+<!-- Home Section
 <section id="home">
     <h1>Melek Mizher</h1>
     <p>Technology Enthusiast | Photographer | Polyglot</p>
 </section>
+-->
+
 <div class="container">
     <!-- Introduction Section -->
     <section id="introduction">
-        <h1>Introduction</h1>
+        <!--<h2>Introduction</h2>-->
+        <h2></h2>
         <div class="intro">
-            <img id="profile" src="resources/images/profile.jpeg" alt="Melek Mizher">
-            <p>Hello, I'm Melek Mizher, a passionate technologist, data scientist, and photographer.
-                I have a diverse background in biomedical science and technology, and I'm always
-                eager to explore new ways of combining creativity with technical innovation.</p>
+            <!--<img id="profile" src="resources/images/profile.jpeg" alt="Melek Mizher">-->
+            <p>I'm a data scientist with a strong foundation in biomedical
+                sciences, technology, and analytics.</p>
+            <h2></h2>
+            <p>I’m driven by a passion to find creative solutions to solve complex problems
+                and create impactful solutions.</p>
         </div>
+        <h2></h2>
     </section>
+</div>
+
+<section id="break">
+    <div class="hero" id="second-hero">
+        <p>Learn more about my favorite</p><a href="portfolio.html">Projects</a>
+        <p>Scroll down to learn more about me</p>
+    </div>
+</section>
+
+<div class="container">
 
     <!-- Professional Journey Section -->
     <section id="professional-journey">
+        <h2></h2>
         <h2>Professional Journey</h2>
-        <p>My journey started with a strong passion for technology, and I've since earned a Master's
-            degree in Data Science/AI from a top U.S. university. I have a deep understanding of using
-            big data to solve scientific and technical problems, from optimizing protein structures to
-            creating financial models. I have worked as a biomedical scientist and developed strong
-            analytical and programming skills over the years.</p>
-
-        <p>During my studies, I also developed a passion for algorithmic problem-solving, which
-            I explored further in group projects such as 'Washington State Algorithmic Redistricting.'
-            My experience spans different sectors, including medical technologies and computational biology,
-            making me well-rounded in data science and analytics.</p>
+        <p>
+            My journey into data science began with a passion for technology and problem-solving,
+            which led me to earn a Master's degree in Data Science/AI from Northwestern University.
+            I specialize in using data to generate insights and develop solutions. I’ve worked on projects ranging from algorithmic optimization to predictive modeling,
+            focusing on applying data analytics and visualization to solve real-world challenges.
+        </p>
+        <h2></h2>
+        <p>
+            During my studies, I developed a strong interest in algorithmic problem-solving,
+            applying this to the projects displayed in this portfolio. I’ve worked on optimizing
+            processes, creating efficient algorithms, and tackling real-world problems through data-driven
+            methods. These projects helped refine my approach to problem-solving, from initial data collection
+            to deploying solutions. This has allowed me to refine my skills across diverse fields,
+            giving me a well-rounded understanding of data science and its applications.
+        </p>
+        <h2></h2>
+        <p>
+            My expertise extends to big data analysis, creating models, and using data-driven approaches
+            to tackle complex issues. I’ve developed a strong foundation in machine learning, statistical analysis,
+            and data visualization, which I’ve applied across projects from multiple fields. Whether it’s optimizing processes
+            or uncovering insights from complex datasets, I’m passionate about leveraging data science to drive
+            impactful solutions and innovation.
+        </p>
+        <h2></h2>
     </section>
-
+    <section id="break2">
+        <div class="text second-hero">
+            <p>This is how I take up the Space that I need</p>
+        </div>
+    </section>
     <!-- Personal Interests Section -->
     <section id="personal-interests">
         <h2>Personal Interests</h2>
-        <p>When I'm not immersed in data or working on projects, I indulge in photography. I discovered
-            my love for capturing the world through a lens during a family trip to Syria, and since then,
-            it's become one of my greatest passions. You can view some of my favorite photos in the
-            <a href="/photography.html">Photography</a> section of my portfolio.</p>
-
-        <p>I’m also a language enthusiast! Growing up bilingual in Spanish and Arabic, I later
-            picked up English, Portuguese, and even Turkish. I’m currently learning Dutch, as my
+        <p>When I'm not immersed in data or a project, I enjoy photography, video games, and sports.
+            I discovered my love for capturing the world through a lens during a childhood family trip,
+            and since then, it's become one of my greatest passions. You can view some of my favorite
+            photos in the <a href="/photography.html">Photography</a> section.</p>
+        <h2></h2>
+        <p>I’m a language enthusiast. Growing up bilingual in Spanish and Arabic, I later
+            picked up English, Portuguese, and Turkish. I’m currently learning Dutch, as my
             fiancée's family resides in the Netherlands.</p>
     </section>
+</div>
 
-
-    <div class="sidebar">
-        <h2>Quick Info</h2>
-        <p>Learn more about my favorite projects:</p>
-        <ul>
-            <li><a href="#">Project 1</a></li>
-            <li><a href="#">Project 2</a></li>
-            <li><a href="#">Project 3</a></li>
-        </ul>
-        <h2>Contact Info</h2>
-        <p>Email: melek@example.com</p>
-        <p>LinkedIn: <a href="#">melek-linkedin</a></p>
-    </div>
-
-
+<!-- JavaScript Section -->
 <script>
+    // Menu toggle function
     function toggleMenu() {
         const navLinks = document.querySelector('.nav-links');
         navLinks.classList.toggle('active');
     }
 </script>
+
+<script>
+    // New JavaScript code for smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
 </body>
+
 <!-- Footer (Include here or through a server-side include) -->
 <footer>
     <div data-include="resources/utils/footer.html"></div>
 </footer>
-</html><script src="resources/js/menu.js"></script>
+
+</html>
+<script src="resources/js/menu.js"></script>

@@ -1,30 +1,89 @@
 * {
-    font-family: Georgia, Helvetica, sans-serif;
+    font-family: "Playfair Display", Monteserrat, serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add animations for sections to appear as you scroll */
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Make section visible when it's in the viewport */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Fonts */
+
+.dm-serif-display-regular {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+.playfair-display-regular {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.playfair-display-italic {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.eb-garamond-regular {
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.eb-garamond-italic {
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Banner and Navbar */
 
 .banner_tab a {
     text-decoration: none;
     color: white;
     display: block;
     white-space: nowrap; /* Keeps text from wrapping to next line */
-    padding: 15px; /* Adds space around the text for better clickable area */
-    font-size: 1.1rem; /* Slightly larger font size for clarity */
-    /* text-align: center; */
+    padding: 1vw;
+    font-size: 2vw; /* Slightly larger font size for clarity */
+    align-content: center;
+    text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
-
-
 
 
 .banner_tab a:hover {
     font-weight: bold;
     color: white;
-    font-size: 1.2rem; /* Increase font size on hover */
     background-color: #4A4A4A;
-    transform: scale(1.1);
+    transform: scale(1.25);
 }
 
 .banner_tab a:active {
@@ -45,42 +104,45 @@ nav {
 
 nav li {
     font-size: 24px;
+    font-family: "Playfair Display", Georgia, serif;
     display: inline-block;
     text-align: center;
     color: white;
-    margin-right: 20px;
+    margin: 1vw;
     background-color: #111111;
     line-height: 30px; /* Vertically centers the text */
     padding: 0; /* Padding handled by <a> */
 }
 
+/* Text Typography */
 h1 {
     color: #2F4F4F;
+    font-family: "Playfair Display", serif;
     font-weight: 700;
-    font-size: 3rem;
-    margin-top: 0.5em;
-    margin-left: 0.75em;
-    margin-bottom: 0.25em;
-    /* text-transform: uppercase; */
-    letter-spacing: 2px;
+    font-size: 6vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    margin-bottom: 1vw;
+    letter-spacing: 0.5vw;
 }
 
 h2 {
     color: #2F4F4F;
-    font-size: 2rem;
-    margin-left: 0.35em;
-    margin-bottom: 0.20em;
+    font-family: "Playfair Display", serif;
+    font-size: 5vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
     font-weight: 600;
-    border-bottom: 2px solid #4A4A4A;
-    padding-bottom: 5px;
+    border-bottom: 0.4vw solid #4A4A4A;
+    padding-bottom: 0vw;
+    text-align: center;
 }
 
+
 p, li {
-    font-size: 1.125rem;
-    margin-left: 2em;
-    line-height: 1.6;
+    font-family: "Playfair Display", serif;
+    line-height: 1.5;
     color: #333333;
-    margin-bottom: 15px;
 }
 
 a {
@@ -97,6 +159,7 @@ body {
     margin: 0;
     margin-top: 80px;
     padding: 0;
+    background-attachment: fixed; /* Ensure the background stays fixed */
 }
 
 .nav-links {
@@ -162,11 +225,11 @@ body {
     }
     /* Style the links for mobile */
     .nav-links li {
-        padding: 15px 0;
+        padding: 1px 0;
     }
 
     .nav-links li a {
-        font-size: 24px;
+        font-size: 4vw;
     }
 }
 
@@ -179,9 +242,10 @@ img {
 
 .container {
     width: 90%; /* Set the content width to 90% of the page width */
-    max-width: 1200px; /* Prevent the content from becoming too wide */
+    max-width: 3500px; /* Prevent the content from becoming too wide */
     margin: 0 auto; /* Center the container */
-    padding: 20px; /* Add padding for better spacing */
+    background-color: #f4f4f4;
+    padding: 30px; /* Add padding for better spacing */
 }
 
 @media screen and (min-width: 768px) {
@@ -195,6 +259,11 @@ img {
         flex-grow: 1; /* Equal distribution */
         text-align: center; /* Keep items centered */
     }
+
+    .container {
+        flex-grow: 1; /* Equal distribution */
+    }
+
     img {
         max-width: 80%;
     }
@@ -227,13 +296,12 @@ figcaption {
 
 .sidebar {
     flex: 1;
-    padding: 20px;
+    padding: 100px;
     background-color: #f4f4f4;
     border-radius: 10px;
 }
 
 .sidebar h2 {
-    font-family: Georgia, serif;
     margin-bottom: 10px;
 }
 
@@ -243,7 +311,7 @@ figcaption {
 }
 
 .sidebar ul li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .sidebar a {
@@ -258,20 +326,23 @@ figcaption {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
     z-index: 10;
+    flex-direction: column;
 }
-
 
 .hero h1 {
     color: white;
+    font-family: "Playfair Display", Georgia, serif;
     text-shadow: #2A2A2A 5px 5px;
-    font-size: 4em;
+    word-spacing: 10px;
+    letter-spacing: 8px;
+    font-size: 10vw;
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;
 }
@@ -284,12 +355,31 @@ figcaption {
 
 .hero p {
     color: white;
-    text-shadow: #2A2A2A 5px 5px;
-    font-size: 1.8em;
+    font-family: "Playfair Display", serif;
+    text-shadow: #2A2A2A 3px 3px;
+    font-size: 3.5vw;
     opacity: 0;
     line-height: 1.5;
-    animation: fadeIn 4s ease-in forwards;
+    animation: fadeIn 3s ease-in forwards;
 }
+
+.container {
+    background-image: url('/resources/images/triangle_background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: color-dodge;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
 
 .cta-button {
     padding: 10px 20px;
@@ -298,4 +388,114 @@ figcaption {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2em;
+}
+
+.intro p {
+    font-size: 7vw;
+}
+
+#break {
+    background-image: url('/resources/images/triangle_background.jpg');
+    background-color: transparent;
+    background-blend-mode: normal;
+    opacity: 1;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+#second-hero {
+    z-index: 9;
+}
+
+#second-hero p {
+    margin: 2vw;
+    padding: 5vw;
+    font-size: 5vw;
+    flex-direction: column;
+}
+
+#second-hero a {
+    text-decoration: none;
+    color: #333333;
+    background-image: url('/resources/images/triangle_background.jpg');
+    background-color: #F4F4F4; /* Base background color */
+    background-blend-mode: color-dodge;
+    padding: 1vw 1vw;
+    border-radius: 5px; /* Smooth rounded corners */
+    font-size: 7.5vw;
+    text-shadow: #2A2A2A 1px 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 6); /* Subtle shadow for depth */
+}
+
+/* Hover effect */
+#second-hero a:hover {
+    background-color: #774b4b; /* Darker background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+#second-hero a:active {
+    background-color: #357ABD; /* Darker background on hover */
+    transform: translateY(+3px); /* Slight downward movement */
+}
+
+#professional-journey h2 {
+    color: #2F4F4F;
+    font-family: "Playfair Display", serif;
+    font-size: 7vw;
+}
+
+#professional-journey p {
+    font-family: "Playfair Display", serif;
+    line-height: 1.5;
+    font-size: 3.5vw;
+    color: #333333;
+}
+
+#break2 {
+    background-image: url('/resources/images/triangle_background.jpg');
+    background-color: transparent;
+    background-blend-mode: normal;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100vw; /* Make sure it spans the entire width of the viewport */
+    margin: 0; /* Remove any margin to avoid spacing */
+    height: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9;
+}
+
+#break2 .text p {
+    visibility: hidden; /* Hide the text while keeping the space */
+}
+
+
+#personal-interests h2 {
+    color: #2F4F4F;
+    font-family: "Playfair Display", serif;
+    font-size: 7vw;
+}
+
+#personal-interests p {
+    font-family: "Playfair Display", serif;
+    line-height: 1.5;
+    font-size: 3.5vw;
+    color: #333333;
+}
+
+#personal-interests a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #774b4b;
 }
