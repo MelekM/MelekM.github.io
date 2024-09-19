@@ -241,6 +241,7 @@ body {
         background-attachment: scroll; /* Switch to 'scroll' on mobile to prevent stretching */
         background-size: cover; /* Ensures the image covers the container without distortion */
         background-position: center; /* Centers the image */
+        -webkit-background-size: cover;
     }
 }
 
