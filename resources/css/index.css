@@ -238,7 +238,7 @@ body {
     }
 
     #hero, #second-hero, #break {
-        background-attachment: inherit; /* Prevents stretching or fixing of view on small screens */
+        background-attachment: scroll; /* Prevents stretching or fixing of view on small screens */
     }
 }
 
@@ -437,8 +437,12 @@ figcaption {
 
 #second-hero p {
     margin: 2vw;
-    padding: 5vw;
+    color: white;
+    font-family: "Playfair Display", serif;
+    text-shadow: #2A2A2A 3px 3px;
+    line-height: 1.5;
     font-size: 5vw;
+    padding: 5vw;
     flex-direction: column;
 }
 
