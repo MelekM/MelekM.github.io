@@ -236,6 +236,24 @@ body {
     .nav-links li a {
         font-size: 4vw;
     }
+    #hero {
+        background-image: url('/resources/images/triangle_background.jpg');
+        background-size: cover; /* Ensures the image covers the container without distortion */
+        background-position: center; /* Centers the image */
+        background-attachment: scroll; /* Prevents stretching caused by fixed background on mobile */
+    }
+    #second-hero {
+        background-image: url('/resources/images/triangle_background.jpg');
+        background-size: cover; /* Ensures the image covers the container without distortion */
+        background-position: center; /* Centers the image */
+        background-attachment: scroll; /* Prevents stretching caused by fixed background on mobile */
+    }
+    #break {
+        background-image: url('/resources/images/triangle_background.jpg');
+        background-size: cover; /* Ensures the image covers the container without distortion */
+        background-position: center; /* Centers the image */
+        background-attachment: scroll; /* Prevents stretching caused by fixed background on mobile */
+    }
 }
 
 img {
