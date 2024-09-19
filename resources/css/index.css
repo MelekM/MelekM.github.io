@@ -513,7 +513,7 @@ figcaption {
 #professional-journey p {
     font-family: "EB Garamond", "Playfair Display", serif;
     line-height: 1.5;
-    font-size: 3.5vw;
+    font-size: 4vw;
     color: #333333;
 }
 
@@ -559,7 +559,7 @@ figcaption {
 .personal-interests p, figcaption {
     font-family: "EB Garamond", "Playfair Display", serif;
     line-height: 1.5;
-    font-size: 3.5vw;
+    font-size: 4vw;
     color: #333333;
 }
 
@@ -588,7 +588,7 @@ figcaption {
 .values-vision p {
     font-family: "EB Garamond", "Playfair Display", serif;
     line-height: 1.5;
-    font-size: 3.5vw;
+    font-size: 4vw;
     color: #333333;
 }
 
