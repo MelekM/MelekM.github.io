@@ -237,7 +237,7 @@ body {
         font-size: 4vw;
     }
 
-    #hero, #second-hero, #break {
+    .hero, #second-hero, #break {
         background-attachment: scroll; /* Prevents stretching or fixing of view on small screens */
     }
 }
