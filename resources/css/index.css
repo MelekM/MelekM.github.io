@@ -569,7 +569,7 @@ figcaption {
     border-bottom: 1.8vw solid #4A4A4A;
 }
 
-.personal-interests p {
+.personal-interests p, figcaption {
     font-family: "EB Garamond", "Playfair Display", serif;
     line-height: 1.5;
     font-size: 3.5vw;

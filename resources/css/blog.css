@@ -1,0 +1,28 @@
+#blog h2 {
+    color: #2F4F4F;
+    font-family: "Playfair Display", serif;
+    font-size: 7vw;
+}
+
+#blog h3 {
+    color: #2F4F4F;
+    font-family: "Playfair Display", serif;
+    font-size: 7vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    font-weight: 600;
+    border-bottom: 1.8vw solid #4A4A4A;
+}
+
+#blog p {
+    font-family: "EB Garamond", "Playfair Display", serif;
+    line-height: 1.5;
+    font-size: 3.5vw;
+    color: #333333;
+}
+
+#blog a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #774b4b;
+}
