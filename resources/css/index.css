@@ -238,7 +238,9 @@ body {
     }
 
     .hero, #second-hero, #break {
-        background-attachment: scroll; /* Prevents stretching or fixing of view on small screens */
+        background-attachment: scroll; /* Switch to 'scroll' on mobile to prevent stretching */
+        background-size: cover; /* Ensures the image covers the container without distortion */
+        background-position: center; /* Centers the image */
     }
 }
 
