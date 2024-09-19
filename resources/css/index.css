@@ -553,13 +553,13 @@ figcaption {
 }
 
 
-#personal-interests h2 {
+.personal-interests h2 {
     color: #2F4F4F;
     font-family: "Playfair Display", serif;
     font-size: 7vw;
 }
 
-#personal-interests h3 {
+.personal-interests h3 {
     color: #2F4F4F;
     font-family: "Playfair Display", serif;
     font-size: 7vw;
@@ -569,26 +569,26 @@ figcaption {
     border-bottom: 1.8vw solid #4A4A4A;
 }
 
-#personal-interests p {
+.personal-interests p {
     font-family: "Playfair Display", serif;
     line-height: 1.5;
     font-size: 3.5vw;
     color: #333333;
 }
 
-#personal-interests a {
+.personal-interests a {
     text-decoration: none;
     font-weight: 700;
     color: #774b4b;
 }
 
-#values-vision h2 {
+.values-vision h2 {
     color: #2F4F4F;
     font-family: "Playfair Display", serif;
     font-size: 7vw;
 }
 
-#values-vision h3 {
+.values-vision h3 {
     color: #2F4F4F;
     font-family: "Playfair Display", serif;
     font-size: 7vw;
@@ -598,14 +598,14 @@ figcaption {
     border-bottom: 1.8vw solid #4A4A4A;
 }
 
-#values-vision p {
+.values-vision p {
     font-family: "Playfair Display", serif;
     line-height: 1.5;
     font-size: 3.5vw;
     color: #333333;
 }
 
-#values-vision a {
+.values-vision a {
     text-decoration: none;
     font-weight: 700;
     color: #774b4b;
