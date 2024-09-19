@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="resources/css/index.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Javascript Section -->
     <script src="resources/js/menu.js"></script>
+    <script src="resources/js/menutoggle_smoothscroll.js"></script>
 
     <!-- DM Serif Display, and Playfair Display Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,16 +41,16 @@
     <!-- Introduction Section -->
     <section id="introduction">
         <!--<h2>Introduction</h2>-->
-        <h2></h2>
         <div class="intro">
+            <h3></h3>
             <!--<img id="profile" src="resources/images/profile.jpeg" alt="Melek Mizher">-->
             <p>I'm a data scientist with a strong foundation in biomedical
                 sciences, technology, and analytics.</p>
             <h2></h2>
             <p>I’m driven by a passion to find creative solutions to solve complex problems
                 and create impactful solutions.</p>
+        <h3></h3>
         </div>
-        <h2></h2>
     </section>
 </div>
 
@@ -62,7 +65,7 @@
 
     <!-- Professional Journey Section -->
     <section id="professional-journey">
-        <h2></h2>
+        <h3></h3>
         <h2>Professional Journey</h2>
         <p>
             My journey into data science began with a passion for technology and problem-solving,
@@ -87,7 +90,7 @@
             or uncovering insights from complex datasets, I’m passionate about leveraging data science to drive
             impactful solutions and innovation.
         </p>
-        <h2></h2>
+        <h3></h3>
     </section>
     <section id="break2">
         <div class="text second-hero">
@@ -96,7 +99,7 @@
     </section>
     <!-- Personal Interests Section -->
     <section id="personal-interests">
-        <h2></h2>
+        <h3></h3>
         <h2>Personal Interests</h2>
         <p>When I'm not immersed in data or a project, I enjoy photography, video games, and sports.
             I discovered my love for capturing the world through a lens during a childhood family trip,
@@ -106,33 +109,9 @@
         <p>I’m a language enthusiast. Growing up bilingual in Spanish and Arabic, I later
             picked up English, Portuguese, and Turkish. I’m currently learning Dutch, as my
             fiancée's family resides in the Netherlands.</p>
+        <h3></h3>
     </section>
 </div>
-
-<!-- JavaScript Section -->
-<script>
-    // Menu toggle function
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-    }
-</script>
-
-<script>
-    // New JavaScript code for smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetElement = document.querySelector(this.getAttribute('href'));
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-</script>
 
 </body>
 
@@ -140,6 +119,5 @@
 <footer>
     <div data-include="resources/utils/footer.html"></div>
 </footer>
-
 </html>
-<script src="resources/js/menu.js"></script>
+

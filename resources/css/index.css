@@ -271,7 +271,7 @@ img {
     max-width: 3500px; /* Prevent the content from becoming too wide */
     margin: 0 auto; /* Center the container */
     background-color: #f4f4f4;
-    padding: 30px; /* Add padding for better spacing */
+    padding: 10px 30px; /* Add padding for better spacing */
 }
 
 @media screen and (min-width: 768px) {
@@ -420,6 +420,16 @@ figcaption {
     font-size: 7vw;
 }
 
+.intro h3 {
+    color: #2F4F4F;
+    font-family: "Playfair Display", serif;
+    font-size: 7vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    font-weight: 600;
+    border-bottom: 1.8vw solid #4A4A4A;
+}
+
 #break {
     background-image: url('/resources/images/triangle_background.jpg');
     background-color: transparent;
@@ -503,6 +513,16 @@ figcaption {
     font-size: 7vw;
 }
 
+#professional-journey h3 {
+    color: #2F4F4F;
+    font-family: "Playfair Display", serif;
+    font-size: 7vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    font-weight: 600;
+    border-bottom: 1.8vw solid #4A4A4A;
+}
+
 #professional-journey p {
     font-family: "Playfair Display", serif;
     line-height: 1.5;
@@ -525,6 +545,7 @@ figcaption {
     align-items: center;
     text-align: center;
     z-index: 9;
+    padding: 10px 30px;
 }
 
 #break2 .text p {
@@ -536,6 +557,16 @@ figcaption {
     color: #2F4F4F;
     font-family: "Playfair Display", serif;
     font-size: 7vw;
+}
+
+#personal-interests h3 {
+    color: #2F4F4F;
+    font-family: "Playfair Display", serif;
+    font-size: 7vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    font-weight: 600;
+    border-bottom: 1.8vw solid #4A4A4A;
 }
 
 #personal-interests p {
@@ -555,6 +586,16 @@ figcaption {
     color: #2F4F4F;
     font-family: "Playfair Display", serif;
     font-size: 7vw;
+}
+
+#values-vision h3 {
+    color: #2F4F4F;
+    font-family: "Playfair Display", serif;
+    font-size: 7vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    font-weight: 600;
+    border-bottom: 1.8vw solid #4A4A4A;
 }
 
 #values-vision p {
