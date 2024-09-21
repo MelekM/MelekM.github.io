@@ -6,39 +6,52 @@
     padding: 0;
 }
 
+
+
 /* Typography styling */
-/* Heading and Text Styling for Photography Page */
-#photography h1, h2, h3 {
+
+.photography h3 {
     color: #2F4F4F;
-    font-family: "Playfair Display", serif; /* Same font as index */
-    margin-bottom: 1.5rem;
-    text-align: center; /* Center titles for consistency */
-    letter-spacing: 0.5vw; /* Consistent letter spacing */
-    font-size: 5vw; /* Adjust for responsiveness */
+    font-family: "Playfair Display", serif;
+    font-size: 7vw;
+    margin: 2vw 0;
+    font-weight: 600;
+    border-bottom: 0.4vw solid #4A4A4A;
+    text-align: center;
 }
 
-#photography p {
+.photography h2 {
+    color: #2F4F4F;
+    font-family: "Playfair Display", serif;
+    font-size: 7vw;
+    text-align: center;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    font-weight: 600;
+    border-bottom: 1.8vw solid #4A4A4A;
+}
+
+.photography p, figcaption {
+    font-family: "EB Garamond", "Playfair Display", serif;
+    line-height: 1.5;
+    font-size: 4vw;
     color: #333333;
-    font-family: "Playfair Display", serif;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    letter-spacing: 0.2vw; /* Slightly tighter for paragraphs */
-    font-size: 3.5vw; /* Responsive font size for paragraphs */
 }
 
-#photography a {
-    color: #2E8B57;
-    font-family: "Playfair Display", serif;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    letter-spacing: 0.2vw; /* Keep link styling subtle but consistent */
-    font-size: 3.5vw; /* Responsive font size for links */
-    text-decoration: none; /* Remove underline for a cleaner look */
-    transition: color 0.3s ease; /* Smooth color transition */
+.photography a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #774b4b;
 }
 
-#photography a:hover {
+.photography a:hover {
     color: #2E8B57; /* Hover color for links */
+}
+
+
+/* Layout for title and description */
+#photography-title {
+    padding: 1vw 0 0 0;
 }
 
 
@@ -64,7 +77,10 @@
 
 .gallery img {
     width: 100%; /* Make images responsive */
-    max-width: 300px; /* Ensure consistent image size */
+    max-width: 200px; /* Ensure consistent image size */
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 100px;
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
     border-radius: 5px;

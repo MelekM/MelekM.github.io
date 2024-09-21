@@ -120,9 +120,7 @@ h1 {
     font-family: "Playfair Display", serif;
     font-weight: 700;
     font-size: 6vw;
-    margin-top: 2vw;
-    margin-left: 2vw;
-    margin-bottom: 1vw;
+    margin: 2vw 0 1vw 2vw;
     letter-spacing: 0.5vw;
 }
 
@@ -130,11 +128,9 @@ h2 {
     color: #2F4F4F;
     font-family: "Playfair Display", serif;
     font-size: 5vw;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin: 2vw 0;
     font-weight: 600;
     border-bottom: 0.4vw solid #4A4A4A;
-    padding-bottom: 0vw;
     text-align: center;
 }
 
@@ -156,8 +152,7 @@ a:hover {
 
 body {
     background-color: #f4f4f4;
-    margin: 0;
-    margin-top: 80px;
+    margin: 80px 0 0 0;
     padding: 0;
     background-attachment: fixed; /* Ensure the background stays fixed */
 }
@@ -225,9 +220,6 @@ body {
         padding: 20px;
     }
 
-    img {
-        margin: 10px 20px;
-    }
     /* Style the links for mobile */
     .nav-links li {
         padding: 1px 0;
@@ -248,6 +240,7 @@ img {
     height: auto; /* Maintain the aspect ratio */
     display: block; /* Prevent extra space below images */
     margin: 2vh auto; /* Center the image horizontally */
+    }
 }
 
 .container {
@@ -424,46 +417,30 @@ figcaption {
 
 #second-hero a {
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border to blend with theme */
-    color: white;
-    padding: 1.5vw 3vw; /* More padding for a spacious feel */
-    font-family: "Playfair Display", serif;
-    font-size: 2vw; /* Responsive font size */
-    letter-spacing: 0.2vw; /* Adjust letter spacing for elegance */
-    border-radius: 10px; /* Slight rounding for modern look */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-}
-
-#second-hero a:hover {
-    background-color: rgba(255, 255, 255, 0.4); /* Slightly darker on hover */
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
-}
-
-#second-hero a {
-    text-decoration: none;
     color: #ffffff; /* Changed color to white to blend with background */
     background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
     background-image: url('/resources/images/triangle_background.jpg'); /* Original background */
     background-blend-mode: overlay; /* Blend the image with the background color */
     padding: 1vw 1.5vw;
-    border-radius: 10px; /* Slightly more rounded corners for a smoother look */
-    font-size: 7.5vw;
     font-family: "Playfair Display", serif;
+    font-size: 7.5vw;
+    letter-spacing: 0.2vw; /* Adjust letter spacing for elegance */
+    border-radius: 10px; /* Slightly more rounded corners for a smoother look */
     text-shadow: #000000 2px 2px; /* More subtle shadow */
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
 }
 
-/* Hover effect */
 #second-hero a:hover {
     background-color: rgba(255, 255, 255, 0.3); /* Slightly lighter semi-transparent background */
+    color: #A9DAB3;
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover for more depth */
 }
 
+
 /* Active effect (when button is clicked) */
 #second-hero a:active {
+    color: #2E8B57;
     background-color: rgba(255, 255, 255, 0.4); /* Even lighter when active */
     transform: translateY(3px); /* Slight downward movement */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow reduction */
@@ -544,6 +521,13 @@ figcaption {
     font-weight: 700;
     color: #774b4b;
 }
+
+.personal-interests a:hover {
+    text-decoration: none;
+    font-weight: 700;
+    color: #2E8B57;
+}
+
 
 .values-vision h2 {
     color: #2F4F4F;
