@@ -7,13 +7,40 @@
 }
 
 /* Typography styling */
-#photography h1, h2, h3, h4 {
+/* Heading and Text Styling for Photography Page */
+#photography h1, h2, h3 {
     color: #2F4F4F;
-    font-family: "Playfair Display", serif; /* Ensure consistent fonts with the index */
+    font-family: "Playfair Display", serif; /* Same font as index */
     margin-bottom: 1.5rem;
-    text-align: center; /* Center titles for a clean look */
-    letter-spacing: 2px;
+    text-align: center; /* Center titles for consistency */
+    letter-spacing: 0.5vw; /* Consistent letter spacing */
+    font-size: 5vw; /* Adjust for responsiveness */
 }
+
+#photography p {
+    color: #333333;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.2vw; /* Slightly tighter for paragraphs */
+    font-size: 3.5vw; /* Responsive font size for paragraphs */
+}
+
+#photography a {
+    color: #2E8B57;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.2vw; /* Keep link styling subtle but consistent */
+    font-size: 3.5vw; /* Responsive font size for links */
+    text-decoration: none; /* Remove underline for a cleaner look */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#photography a:hover {
+    color: #2E8B57; /* Hover color for links */
+}
+
 
 /* Layout for region, country, and city */
 #photography .region {
@@ -28,27 +55,36 @@
     margin-left: 3rem;
 }
 
-/* Responsive Gallery Grid */
+/* Gallery Styling for Photography Page */
 .gallery {
     display: inline-block;
-    margin: 1rem;
+    margin: 10px;
     text-align: center;
 }
 
 .gallery img {
     width: 100%; /* Make images responsive */
+    max-width: 300px; /* Ensure consistent image size */
     height: auto;
-    max-width: 300px; /* Constrain the max size of images */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    border-radius: 10px; /* Smooth borders */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 .gallery img:hover {
-    transform: scale(1.05); /* Scale effect on hover */
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
+
+/* Caption Styling */
+figcaption {
+    color: #2A2A2A;
+    font-family: "Playfair Display", serif;
+    font-size: 3.5vw; /* Responsive text size */
+    margin-top: 0.5rem;
+    max-width: 20rem;
+}
+
 
 /* Caption Styling */
 figcaption {
@@ -62,21 +98,31 @@ figcaption {
     margin-top: 0.5rem;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .gallery {
-        width: 45%; /* Two images per row on small screens */
-        margin: 0.5rem;
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    #photography h1, h2, h3 {
+        font-size: 6vw; /* Resize headings for smaller screens */
+    }
+
+    #photography p, a {
+        font-size: 4vw; /* Resize text and links */
+    }
+
+    .gallery img {
+        max-width: 100%; /* Adjust image size for smaller screens */
     }
 }
 
-@media (max-width: 480px) {
-    .gallery {
-        width: 100%; /* One image per row on very small screens */
-        margin: 0.5rem;
+@media screen and (max-width: 480px) {
+    #photography h1, h2, h3 {
+        font-size: 7vw; /* Further resize headings */
     }
 
-    figcaption {
-        font-size: 0.9rem; /* Slightly smaller text on small screens */
+    #photography p, a {
+        font-size: 5vw; /* Further resize text */
+    }
+
+    .gallery img {
+        max-width: 80%; /* Ensure images fit on small screens */
     }
 }
