@@ -10,6 +10,15 @@
 
 /* Typography styling */
 
+.photography h4 {
+    color: #2F4F4F;
+    font-family: "Playfair Display", serif;
+    font-size: 3vw;
+    margin: 2vw 0;
+    font-weight: 600;
+    text-align: center;
+}
+
 .photography h3 {
     color: #2F4F4F;
     font-family: "Playfair Display", serif;
@@ -70,19 +79,19 @@
 
 /* Gallery Styling for Photography Page */
 .gallery {
-    display: inline-block;
-    margin: 10px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; /* Align images to the top of the row */
+    margin: 10px 0; /* Spacing around the gallery */
+    width: 100%; /* Full width of the parent container */
 }
 
 .gallery img {
-    width: 100%; /* Make images responsive */
-    max-width: 200px; /* Ensure consistent image size */
-    min-width: 200px;
-    max-height: 200px;
-    min-height: 100px;
+    flex-basis: 200px;
     height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -96,49 +105,42 @@
 figcaption {
     color: #2A2A2A;
     font-family: "Playfair Display", serif;
-    font-size: 3.5vw; /* Responsive text size */
-    margin-top: 0.5rem;
-    max-width: 20rem;
-}
-
-
-/* Caption Styling */
-figcaption {
-    text-align: center;
-    color: #2A2A2A;
-    max-width: 20rem; /* Increased to allow longer captions */
-    word-wrap: break-word;
-    white-space: normal;
-    font-family: "Playfair Display", serif; /* Match index font */
     font-size: 1rem; /* Consistent size */
+    max-width: 200px; /* Match image width */
     margin-top: 0.5rem;
+    text-align: center;
+    word-wrap: break-word;
 }
+
 
 /* Responsive Layout */
-@media screen and (max-width: 768px) {
-    #photography h1, h2, h3 {
-        font-size: 6vw; /* Resize headings for smaller screens */
-    }
-
-    #photography p, a {
-        font-size: 4vw; /* Resize text and links */
-    }
-
+@media screen and (min-width: 768px) {
     .gallery img {
-        max-width: 100%; /* Adjust image size for smaller screens */
+        flex-basis: 250px; /* Increase the size of images on larger screens */
+        height: auto;
+    }
+
+    figcaption {
+        font-size: 1.2rem; /* Slightly larger captions on bigger screens */
+        max-width: 250px; /* Ensure captions match image width */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery img {
+        flex-basis: 150px; /* Shrink images for smaller screens */
+        height: auto;
+    }
+
+    figcaption {
+        font-size: 0.9rem; /* Slightly smaller captions */
+        max-height: 4rem; /* Adjust height for smaller screens */
     }
 }
 
 @media screen and (max-width: 480px) {
-    #photography h1, h2, h3 {
-        font-size: 7vw; /* Further resize headings */
-    }
-
-    #photography p, a {
-        font-size: 5vw; /* Further resize text */
-    }
-
     .gallery img {
-        max-width: 80%; /* Ensure images fit on small screens */
+        flex-basis: 100px; /* Further shrink images for mobile screens */
+        height: auto;
     }
 }
