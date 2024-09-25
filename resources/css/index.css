@@ -232,7 +232,6 @@ body {
     .hero, #second-hero, #break {
         background-attachment: scroll; /* Prevents fixed issues */
         background-size: contain; /* Adjust the size for mobile */
-        background-image: url('/resources/images/triangle_background_tiled.jpg');
         background-position: center top; /* Show the top of the image */
     }
 
@@ -370,7 +369,7 @@ figcaption {
 }
 
 .intro p {
-    font-size: 7vw;
+    font-size: 5vw;
 }
 
 .intro h3 {
@@ -411,7 +410,7 @@ figcaption {
     font-family: "Playfair Display", serif;
     text-shadow: #2A2A2A 3px 3px;
     line-height: 1.5;
-    font-size: 5vw;
+    font-size: 3vw;
     padding: 5vw;
     flex-direction: column;
 }
