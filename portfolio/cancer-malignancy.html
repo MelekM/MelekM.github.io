@@ -12,32 +12,132 @@
 </head>
 
 <body>
+<!-- Navbar -->
 <div data-include="/resources/utils/navbar.html"></div>
 
+<!-- Main Container -->
 <div class="container">
     <section class="project-detail">
+        <!-- Overview/Introduction -->
+        <h2></h2>
         <h2>Breast Cancer Malignancy Diagnostics using Neural Networks</h2>
-        <p>This project applies multiple statistical learning techniques to model breast cancer malignancy using cellular nuclei measurements. It compares classical statistical methods and deep neural networks to improve diagnosis accuracy, with careful parameter tuning yielding the highest accuracy using neural networks.</p>
+        <p>This project applies statistical learning techniques and neural networks to classify breast cancer malignancy based on cellular nuclei measurements. By comparing traditional classification methods with deep learning approaches, the goal was to improve diagnosis accuracy and reduce human error in cytological inspection.</p>
 
-        <h2>Project Overview</h2>
-        <p>The primary goal was to model and predict breast cancer malignancy based on medical data from cellular nuclei. The project involved comparing classical statistical learning techniques with modern neural networks to identify the most effective model for diagnostic purposes.</p>
+        <!-- Project Goals -->
+        <h2></h2>
+        <h2>Project Goals</h2>
+        <ul>
+            <li>Build and compare multiple models (including classical classifiers and neural networks) for breast cancer diagnosis.</li>
+            <li>Focus on feature transformation (squaring, logarithmic) to improve classification accuracy.</li>
+            <li>Find the optimal deep learning architecture for the task.</li>
+        </ul>
 
+        <!-- Challenges and Solutions -->
+        <h2></h2>
         <h2>Challenges and Solutions</h2>
-        <p>Challenges included finding the optimal model architecture and tuning hyperparameters for the neural networks. We addressed this by using grid search for hyperparameter optimization and testing multiple neural network architectures.</p>
+        <p><strong>Challenge:</strong> Feature selection and model architecture optimization.</p>
+        <p><strong>Solution:</strong></p>
+        <ul>
+            <li>Eliminated features with correlations below 40% to diagnosis.</li>
+            <li>Applied transformations (feature squaring, logarithmic) to enhance model inputs.</li>
+            <li>Used grid search and parameter tuning to optimize neural network performance.</li>
+        </ul>
 
+        <!-- Technologies and Tools Used -->
+        <h2></h2>
         <h2>Technologies and Tools Used</h2>
-        <p><strong>Technologies:</strong> Data Analysis, Neural Networks, Medical Diagnostics</p>
-        <p><strong>Tools:</strong> Python, TensorFlow, Scikit-Learn, Pandas</p>
+        <p><strong>Languages/Technologies:</strong> Python, TensorFlow, Scikit-Learn</p>
+        <p><strong>Libraries:</strong> Pandas, Seaborn, Matplotlib</p>
+        <p><strong>Modeling:</strong> Neural Networks, Random Forest, KNN, SVM</p>
+        <p><strong>Other Tools:</strong> Grid Search, Feature Engineering</p>
 
-        <h2>Results</h2>
-        <p>The deep neural network model outperformed classical methods, yielding the highest diagnostic accuracy after careful tuning of the parameters and model structure.</p>
+        <!-- Data Description -->
+        <h2></h2>
+        <h2>Data Description</h2>
+        <p><strong>Dataset:</strong> Breast Cancer Wisconsin Diagnostic dataset from Kaggle (569 samples).</p>
+        <p><strong>Features:</strong> Ten cellular nuclei measurements for each sample (radius, texture, perimeter, area, etc.), along with standard error and "worst" values for certain features.</p>
+        <p><strong>Feature Removal:</strong> Five features with correlations below 40% were removed, resulting in 33 features for the final model.</p>
 
+        <!-- Methodology -->
+        <h2></h2>
+        <h2>Methodology</h2>
+        <p><strong>Data Preprocessing:</strong> Removed low-correlation features, applied MinMax scaling, created squared and log-transformed versions of the data.</p>
+        <p><strong>Models Compared:</strong> Classifiers included KNN, SVM (Linear/RBF), Random Forest, Decision Trees, Neural Networks, etc.</p>
+        <p><strong>Neural Network Architecture:</strong> 4 hidden layers, 33-24-36 neurons, ReLU activations, final layer with sigmoid activation.</p>
+
+        <!-- Key Results -->
+        <h2></h2>
+        <h2>Key Results</h2>
+        <ul>
+            <li>The deep neural network achieved the highest accuracy of 98.25%, outperforming classical methods.</li>
+            <li><strong>Key Features for Diagnosis:</strong> Concave Points Worst (most significant factor in differentiating between malignant and benign), Mean Area, and Texture.</li>
+        </ul>
+
+        <!-- Data Visualization -->
+        <h2></h2>
+        <h2>Data Visualization</h2>
+        <!-- Classifier Performance Comparison -->
+        <figure>
+            <img src="/portfolio/resources/cancer-malignancy/Basic_Classifier_Performance.png" alt="Basic Classifier Performance">
+            <figcaption>Classifier Performance Comparison: Accuracy Scores for Classifiers</figcaption>
+        </figure>
+
+        <!-- Final Correlation Heatmap -->
+        <h2></h2>
+        <figure>
+            <img src="/portfolio/resources/cancer-malignancy/FinalCorr.png" alt="Final Correlation Heatmap">
+            <figcaption>Final Correlation Heatmap Post Feature Dropping</figcaption>
+        </figure>
+
+        <!-- Clustered Heatmap -->
+        <h2></h2>
+        <figure>
+            <img src="/portfolio/resources/cancer-malignancy/Cluster_Heatmap_Post_Dropping.png" alt="Clustered Heatmap">
+            <figcaption>Clustered Heatmap of Features Post-Dropping</figcaption>
+        </figure>
+
+        <!-- Model ROC Curve -->
+        <h2></h2>
+        <figure>
+            <img src="/portfolio/resources/cancer-malignancy/Model_ROC.png" alt="ROC Curve">
+            <figcaption>ROC Curve of the Neural Network Model</figcaption>
+        </figure>
+
+        <!-- Analysis and Interpretation -->
+        <h2></h2>
+        <h2>Analysis & Interpretation</h2>
+        <p>The deep neural network model achieved high accuracy, but classical methods like Random Forests and KNN performed comparably. Concave points and area-related features were the most significant factors in diagnosing malignancy. Further hyperparameter tuning could offer marginal improvements, but the current model architecture is near optimal.</p>
+
+        <!-- Conclusion -->
+        <h2></h2>
+        <h2>Conclusion</h2>
+        <p>The deep neural network outperforms traditional models, offering a balanced trade-off between complexity and diagnostic accuracy. Future work could involve exploring more complex feature engineering, outlier detection, and advanced hyperparameter tuning.</p>
+
+        <!-- Screenshots -->
+        <h2></h2>
+        <h2>Screenshots</h2>
+        <figure>
+            <img src="/portfolio/resources/cancer-malignancy/batch_size.png" alt="Accuracy by Batch Size">
+            <figcaption>Accuracy by Batch Size</figcaption>
+        </figure>
+        <figure>
+            <img src="/portfolio/resources/cancer-malignancy/classifiers.png" alt="Accuracy by Classifier">
+            <figcaption>Accuracy by Classifier</figcaption>
+        </figure>
+
+        <!-- View on Github Link -->
+        <h2></h2>
+        <a href="https://github.com/MelekM/Mizher-Data-Science-AI-Portfolio/tree/218c22a900b63243c453abc341a48ec9a4863476/Mizher_Breast_Cancer_Analysis_AI" target="_blank">View Data and Files on GitHub</a>
+        <h2></h2>
+        <!-- Back to Portfolio Link -->
         <a href="/portfolio.html" target="_blank">Back to Portfolio</a>
     </section>
 </div>
 
+<!-- Footer -->
 <footer>
     <div data-include="/resources/utils/footer.html"></div>
 </footer>
+
 </body>
 </html>

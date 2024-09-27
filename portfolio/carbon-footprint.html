@@ -23,28 +23,108 @@
 <!-- Navbar -->
 <div data-include="/resources/utils/navbar.html"></div>
 
-<!-- Main Project Section -->
+<!-- Main Container -->
 <div class="container">
     <section class="project-detail">
-        <h1>The Carbon Footprint of Trade</h1>
+        <!-- Overview/Introduction -->
+        <h2>The Carbon Footprint of Trade</h2>
         <p>This project investigates the environmental impact of international trade in OECD countries. Utilizing data from the OECD, we analyzed carbon emissions embodied in both import and export activities. The findings revealed stark differences between OECD and non-OECD countries, with critical implications for future trade policies.</p>
 
-        <h2>Project Overview</h2>
-        <p>Trade has played a crucial role in shaping global economic policies, but it also significantly impacts environmental sustainability. In this project, we aim to measure the carbon footprint of trade and examine how trade activities affect carbon emissions differently between OECD and non-OECD countries.</p>
+        <!-- Project Goals -->
+        <h2>Project Goals</h2>
+        <ul>
+            <li>Measure and analyze the carbon footprint of trade activities between OECD and non-OECD countries.</li>
+            <li>Compare emissions from both imports and exports across different countries.</li>
+            <li>Provide insights for shaping future environmental and trade policies.</li>
+        </ul>
 
+        <!-- Challenges and Solutions -->
         <h2>Challenges and Solutions</h2>
-        <p>One of the main challenges was gathering and harmonizing data from different countries, as emission standards and trade policies vary. We tackled this by using data normalization techniques and adopting a common analytical framework across all datasets.</p>
+        <p><strong>Challenge:</strong> Harmonizing data and comparing emission statistics across countries with different policies.</p>
+        <p><strong>Solution:</strong></p>
+        <ul>
+            <li>Used data normalization techniques to handle varying emission standards.</li>
+            <li>Adopted a unified analytical framework for all datasets.</li>
+        </ul>
 
+        <!-- Technologies and Tools Used -->
         <h2>Technologies and Tools Used</h2>
         <p><strong>Technologies:</strong> Data Visualization, Environmental Analysis, International Trade Data</p>
         <p><strong>Tools:</strong> Python, Pandas, Matplotlib, Tableau</p>
 
+        <!-- Data Description -->
+        <h2>Data Description</h2>
+        <p><strong>Dataset:</strong> OECD and Non-OECD Emission Data (2008-2018).</p>
+        <p><strong>Sources:</strong>
+        <ul>
+            <li><a href="https://stats.oecd.org/Index.aspx?DataSetCode=IO_GHG_2021" target="_blank">OECD Greenhouse Gas Emissions Database</a></li>
+            <li><a href="https://www.globalcarbonproject.org/" target="_blank">Global Carbon Project Data</a></li>
+        </ul>
+        </p>
+        <p>Data included territorial CO2 emissions per capita, gross emissions from imports and exports, and overall emissions for each country in the dataset.</p>
+
+        <!-- Methodology -->
+        <h2>Methodology</h2>
+        <p><strong>Data Preprocessing:</strong> Emissions were broken down by imports and exports, and normalized to compare countries.</p>
+        <p><strong>Models Compared:</strong> Data visualizations and statistical methods were used to compare emissions across countries.</p>
+
+        <!-- Key Results -->
         <h2>Key Results</h2>
-        <p>The project revealed substantial differences in the carbon footprint of trade between OECD and non-OECD countries, providing crucial insights for shaping future environmental policies related to international trade.</p>
+        <ul>
+            <li>OECD countries, despite higher emissions per capita, contributed less to overall CO2 emissions from exports than non-OECD countries.</li>
+            <li>Non-OECD countries had double the volume of emissions from exports.</li>
+            <li>Major OECD contributors include Korea, the United States, and Japan.</li>
+        </ul>
 
+        <!-- Data Visualization -->
+        <h2>Data Visualization</h2>
+
+        <!-- Atmospheric CO2 Concentration -->
+        <figure>
+            <img src="/portfolio/resources/carbon-footprint/co2_concentrations.png" alt="Atmospheric CO2 Concentration">
+            <figcaption>Atmospheric CO2 Concentration Trends Over Time</figcaption>
+        </figure>
+
+        <!-- OECD vs Non-OECD Exports -->
+        <figure>
+            <img src="/portfolio/resources/carbon-footprint/OECD_vs_NONOECD_Gross_Exports.png" alt="OECD vs NONOECD Gross Exports">
+            <figcaption>OECD vs NONOECD Gross Exports CO2 Emissions</figcaption>
+        </figure>
+
+        <!-- CO2 Emissions from Imports -->
+        <figure>
+            <img src="/portfolio/resources/carbon-footprint/OECD_vs_Non_Imports.png" alt="CO2 Emissions from Imports">
+            <figcaption>CO2 Emissions Embodied in Imports (OECD vs Non-OECD)</figcaption>
+        </figure>
+
+        <!-- Global Surface Temperatures -->
+        <figure>
+            <img src="/portfolio/resources/carbon-footprint/surface_temperatures.png" alt="Global Surface Temperatures">
+            <figcaption>Global Surface Temperatures Over Time</figcaption>
+        </figure>
+
+        <!-- Top 10 OECD Contributors -->
+        <figure>
+            <img src="/portfolio/resources/carbon-footprint/Top_10_OECD_Co2_Emission_contributors_.png" alt="Top 10 OECD CO2 Contributors">
+            <figcaption>Top 10 OECD CO2 Emission Contributors</figcaption>
+        </figure>
+
+        <!-- Per Capita CO2 Emissions Map -->
+        <figure>
+            <img src="/portfolio/resources/carbon-footprint/PerCapita_MtCO2_Stamen_Toner.png" alt="Per Capita CO2 Emissions">
+            <figcaption>Global Per Capita CO2 Emissions Map</figcaption>
+        </figure>
+
+        <!-- Conclusion -->
         <h2>Conclusion</h2>
-        <p>As a result of our findings, we highlight the need for stricter international regulations on carbon emissions, particularly in relation to trade activities, to ensure sustainable economic growth while minimizing the environmental impacts of global trade.</p>
+        <p>The project highlights the stark differences in carbon emissions between OECD and non-OECD countries, with non-OECD countries contributing more to export-related emissions. These findings emphasize the need for stricter international trade regulations to limit environmental impact, while accounting for regional disparities in economic and industrial activities.</p>
 
+        <!-- View on GitHub Link -->
+        <h2></h2>
+        <a href="https://github.com/MelekM/Mizher-Data-Science-AI-Portfolio/tree/218c22a900b63243c453abc341a48ec9a4863476/Data_Visualization_Carbon_Footprint_of_Trade" target="_blank">View Data and Files on GitHub</a>
+        <h2></h2>
+
+        <!-- Back to Portfolio Link -->
         <a href="/portfolio.html" target="_blank">Back to Portfolio</a>
     </section>
 </div>
@@ -53,5 +133,6 @@
 <footer>
     <div data-include="/resources/utils/footer.html"></div>
 </footer>
+
 </body>
 </html>

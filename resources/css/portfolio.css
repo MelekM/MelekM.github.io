@@ -60,3 +60,21 @@
 .portfolio a:hover {
     color: #2E8B57; /* Hover color for links */
 }
+
+.project-detail li, p, a, figcaption {
+    font-family: "EB Garamond", "Playfair Display", serif;
+    list-style: none;
+    line-height: 1.5;
+    font-size: 3vw;
+    color: #333333;
+}
+
+.project-detail a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #774b4b;
+}
+
+.project-detail a:hover {
+    color: #2E8B57;
+}

@@ -12,30 +12,101 @@
 </head>
 
 <body>
+<!-- Navbar -->
 <div data-include="/resources/utils/navbar.html"></div>
 
+<!-- Main Container -->
 <div class="container">
   <section class="project-detail">
-    <h1>Washington State Algorithmic Redistricting</h1>
-    <p>In this project, I collaborated on the development of an optimized redistricting plan for Washington State. Using algorithmic methods, we aimed to balance population distribution while maintaining electoral fairness.</p>
+    <!-- Overview/Introduction -->
+    <h2></h2>
+    <h2>Washington State Algorithmic Redistricting</h2>
+    <p>This project applied algorithmic methods to create an optimized redistricting plan for Washington State. The goal was to ensure a fair balance of population distribution across districts while maintaining electoral fairness and minimizing political bias.</p>
 
-    <h2>Project Overview</h2>
-    <p>The goal was to apply machine learning techniques to optimize electoral redistricting and ensure fairness across voting districts in Washington State.</p>
+    <!-- Project Goals -->
+    <h2></h2>
+    <h2>Project Goals</h2>
+    <ul>
+      <li>Develop an optimized redistricting plan that adheres to legal boundaries while ensuring balanced populations.</li>
+      <li>Minimize human bias by leveraging unsupervised machine learning methods.</li>
+      <li>Incorporate racial and population balance across districts.</li>
+    </ul>
 
+    <!-- Challenges and Solutions -->
+    <h2></h2>
     <h2>Challenges and Solutions</h2>
-    <p>The challenge was to create districts that balance population while avoiding political bias. We used unsupervised learning techniques to remove human bias and ensure the best results.</p>
+    <p><strong>Challenge:</strong> Balancing the population among districts while accounting for racial representation and geographic constraints.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+      <li>Used 2020 census data to define population and racial constraints for each district.</li>
+      <li>Generated a county adjacency matrix to account for geographical restrictions.</li>
+      <li>Applied linear programming to minimize the population disparity between districts while maintaining electoral fairness.</li>
+    </ul>
 
+    <!-- Technologies and Tools Used -->
+    <h2></h2>
     <h2>Technologies and Tools Used</h2>
-    <p><strong>Technologies:</strong> Machine Learning, Algorithmic Optimization</p>
-    <p><strong>Tools:</strong> Python, SciPy, Pandas</p>
+    <p><strong>Languages/Technologies:</strong> Python, SciPy</p>
+    <p><strong>Libraries:</strong> Pandas, Plotly, Matplotlib</p>
+    <p><strong>Other Tools:</strong> US Census Data, Adjacency Matrices</p>
 
-    <h2>Results</h2>
-    <p>We developed an optimized redistricting plan that reduced population disparities between districts while adhering to legal boundaries.</p>
+    <!-- Data Description -->
+    <h2></h2>
+    <h2>Data Description</h2>
+    <p><strong>Data Source:</strong> 2020 US Census Data for Washington State population and demographics.</p>
+    <p><strong>Features:</strong> Total population, racial demographics, and adjacency matrix based on geographical data.</p>
 
+    <!-- Methodology -->
+    <h2></h2>
+    <h2>Methodology</h2>
+    <p><strong>Data Preprocessing:</strong> We built an adjacency matrix for counties and calculated the population and racial composition for each district. We then applied linear programming to balance population while adhering to adjacency constraints.</p>
+    <p><strong>Optimal Redistricting Plan:</strong> 10 districts were generated, ensuring minimal population disparities while adhering to racial balance constraints.</p>
+
+    <!-- Key Results -->
+    <h2></h2>
+    <h2>Key Results</h2>
+    <ul>
+      <li>The optimized plan reduced population disparities between districts.</li>
+      <li><strong>Key Districts:</strong> King County was divided in a way that minimizes overrepresentation.</li>
+    </ul>
+
+    <!-- Data Visualization -->
+    <h2></h2>
+    <h2>Data Visualization</h2>
+    <!-- Redistricting Map -->
+    <figure>
+      <img src="/portfolio/resources/redistricting/Redistricting_Map.png" alt="Washington State Redistricting Map">
+      <figcaption>Washington State Redistricting Map with Optimized District Boundaries</figcaption>
+    </figure>
+
+    <!-- Interactive Map and More Information -->
+    <h2></h2>
+    <h2>Interactive Map and More Information</h2>
+    <p>Explore the interactive map and additional details by clicking the link below:</p>
+    <a href="/portfolio/resources/redistricting/Assignment_3_Some_Race_Constraints_Reorganized_Data-ZS-Updates.html" target="_blank">Open Assignment 3 with Race Constraints</a>
+
+    <!-- Analysis & Interpretation -->
+    <h2></h2>
+    <h2>Analysis & Interpretation</h2>
+    <p>The algorithm successfully balanced population disparities while adhering to racial demographics. However, certain challenges remain, particularly in sparsely populated areas where geographical constraints limited flexibility.</p>
+
+    <!-- Conclusion -->
+    <h2></h2>
+    <h2>Conclusion</h2>
+    <p>The project provided a fair and balanced redistricting solution that minimized population disparities and adhered to legal boundaries. Future work could include refining the model by incorporating more granular data, such as census tract information.</p>
+
+
+    <!-- View on GitHub Link -->
+    <h2></h2>
+    <a href="https://github.com/MelekM/Mizher-Data-Science-AI-Portfolio/tree/218c22a900b63243c453abc341a48ec9a4863476/Decision_Analytics_Washington_State_Redistricting" target="_blank">View Data and Files on GitHub</a>
+    <h2></h2>
+
+    <!-- Back to Portfolio Link -->
     <a href="/portfolio.html" target="_blank">Back to Portfolio</a>
   </section>
 </div>
 
+<!-- Footer -->
 <footer>
   <div data-include="/resources/utils/footer.html"></div>
 </footer>
