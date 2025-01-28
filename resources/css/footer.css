@@ -30,3 +30,21 @@ footer a {
 footer a:hover {
     color: #2E8B57; /* Matches hover style */
 }
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 3rem; /* Adjusted size for desktop */
+    }
+    h2 {
+        font-size: 2.5rem; /* Adjusted size for desktop */
+    }
+    h3 {
+        font-size: 2rem; /* Adjusted size for desktop */
+    }
+    h4 {
+        font-size: 1.75rem; /* Adjusted size for desktop */
+    }
+    p, li, figcaption {
+        font-size: 1rem; /* Adjusted size for desktop */
+    }
+}
