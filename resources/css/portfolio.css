@@ -1,113 +1,141 @@
-* {
-    font-family: "Playfair Display", Montserrat, serif; /* Matching index page fonts */
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Theme tokens */
+:root {
+  --ink: #2F4F4F;
+  --text: #333333;
+  --rule: #4A4A4A;
+  --link: #774b4b;
+  --link-hover: #2E8B57;
 }
 
+/* Limit global font to body; headings are set per-section */
+body {
+  font-family: "EB Garamond", "Playfair Display", serif;
+  color: var(--text);
+  line-height: 1.55;
+}
 
-
-/* Typography styling */
-
+/* ---------------------------------------
+   PORTFOLIO: Typography
+   --------------------------------------- */
+.portfolio h1,
+.portfolio h2,
+.portfolio h3,
 .portfolio h4 {
-    color: #2F4F4F;
-    font-family: "Playfair Display", serif;
-    font-size: 3vw;
-    margin: 2vw 0;
-    font-weight: 600;
-    text-align: center;
+  color: var(--ink);
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
 }
 
-.portfolio h3 {
-    color: #2F4F4F;
-    font-family: "Playfair Display", serif;
-    font-size: 7vw;
-    margin: 2vw 0;
-    font-weight: 600;
-    border-bottom: 0.4vw solid #4A4A4A;
-    text-align: center;
-}
-
-.portfolio h3 {
-    color: #2F4F4F;
-    font-family: "Playfair Display", serif;
-    font-size: 7vw;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    font-weight: 600;
-    border-bottom: 1.8vw solid #4A4A4A;
+/* Fluid, sensible sizes across devices */
+.portfolio h1 {
+  /* mobile → desktop: 2rem..3.25rem */
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  letter-spacing: clamp(1px, 0.5vw, 6px);
+  text-align: center;
+  margin: 2rem 0;
 }
 
 .portfolio h2 {
-    color: #2F4F4F;
-    font-family: "Playfair Display", serif;
-    font-size: 4vw;
-    text-align: left;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    font-weight: 600;
-    border-bottom: 0.5vw solid #4A4A4A;
+  /* 1.5rem..2.25rem */
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  text-align: left;
+  margin: 1.5rem 0;
+  border-bottom: 2px solid var(--rule);
+  padding-bottom: 0.25rem;
 }
 
-.portfolio h1 {
-    color: #2F4F4F;
-    font-family: "Playfair Display", serif;
-    font-size: 7vw;
-    text-align: center;
-    margin: 2vw 0 2vw 0;
-    font-weight: 600;
-    letter-spacing: 0.5vw;
+.portfolio h3 {
+  /* 1.25rem..2rem */
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  text-align: center;
+  margin: 1.25rem 0;
+  border-bottom: 3px solid var(--rule); /* px/rem instead of vw */
+  padding-bottom: 0.35rem;
 }
 
-.portfolio p, figcaption {
-    font-family: "EB Garamond", "Playfair Display", serif;
-    line-height: 1.5;
-    font-size: 2.5vw;
-    color: #333333;
+.portfolio h4 {
+  /* 1.1rem..1.5rem */
+  font-size: clamp(1.1rem, 2.6vw, 1.5rem);
+  text-align: center;
+  margin: 1rem 0;
 }
 
+/* Paragraphs & captions scoped to .portfolio */
+.portfolio p,
+.portfolio figcaption {
+  font-family: "EB Garamond", "Playfair Display", serif;
+  font-size: clamp(1rem, 2.4vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* Links scoped to .portfolio */
 .portfolio a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #774b4b;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--link);
+}
+.portfolio a:hover { color: var(--link-hover); }
+
+/* ---------------------------------------
+   PROJECT DETAIL: text + lists + links
+   --------------------------------------- */
+.project-detail p,
+.project-detail li,
+.project-detail figcaption {
+  font-family: "EB Garamond", "Playfair Display", serif;
+  font-size: clamp(1rem, 2.8vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--text);
 }
 
-.portfolio a:hover {
-    color: #2E8B57; /* Hover color for links */
+.project-detail ul,
+.project-detail ol {
+  margin-left: 1.25rem;
+  padding-left: 0.25rem;
 }
 
-.project-detail li, p, a, figcaption {
-    font-family: "EB Garamond", "Playfair Display", serif;
-    list-style: none;
-    line-height: 1.5;
-    font-size: 3vw;
-    color: #333333;
-}
+.project-detail li { list-style: disc; }
 
 .project-detail a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #774b4b;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--link);
+}
+.project-detail a:hover { color: var(--link-hover); }
+
+/* ---------------------------------------
+   Utilities (optional, helpful for layout)
+   --------------------------------------- */
+.portfolio .rule {
+  border-bottom: 2px solid var(--rule);
+  margin: 1.25rem 0;
 }
 
-.project-detail a:hover {
-    color: #2E8B57;
+.portfolio .center {
+  text-align: center;
 }
 
-@media screen and (min-width: 1024px) {
-    h1 {
-        font-size: 3rem; /* Adjusted size for desktop */
-    }
-    h2 {
-        font-size: 2.5rem; /* Adjusted size for desktop */
-    }
-    h3 {
-        font-size: 2rem; /* Adjusted size for desktop */
-    }
-    h4 {
-        font-size: 1.75rem; /* Adjusted size for desktop */
-    }
-    p, li, figcaption {
-        font-size: 1rem; /* Adjusted size for desktop */
-    }
+.portfolio .mt-2 { margin-top: 0.5rem; }
+.portfolio .mt-4 { margin-top: 1rem; }
+.portfolio .mt-6 { margin-top: 1.5rem; }
+.portfolio .mb-2 { margin-bottom: 0.5rem; }
+.portfolio .mb-4 { margin-bottom: 1rem; }
+.portfolio .mb-6 { margin-bottom: 1.5rem; }
+
+/* ---------------------------------------
+   Desktop refinements (optional)
+   --------------------------------------- */
+@media (min-width: 1024px) {
+  .portfolio h2 { border-bottom-width: 2px; }
+  .portfolio h3 { border-bottom-width: 3px; }
+
+  /* If you want slightly smaller body type on large screens: */
+  .portfolio p,
+  .portfolio figcaption,
+  .project-detail p,
+  .project-detail li,
+  .project-detail figcaption {
+    font-size: 1rem;
+  }
 }

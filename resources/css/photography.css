@@ -1,164 +1,89 @@
-/* General styling to match the index page */
-* {
-    font-family: "Playfair Display", Montserrat, serif; /* Matching index page fonts */
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* ---------------------------------
+   Photography (scoped/fixed)
+   --------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap');
+
+:root{
+  --ink:#2F4F4F;
+  --rule:#4A4A4A;
+  --text:#333;
+  --link:#774b4b;
+  --link-hover:#2E8B57;
 }
 
+.photography{ font-family:"EB Garamond","Playfair Display",serif; color:var(--text); line-height:1.6; }
 
-
-/* Typography styling */
-
-.photography h4 {
-    color: #2F4F4F;
-    font-family: "Playfair Display", serif;
-    font-size: 3vw;
-    margin: 2vw 0;
-    font-weight: 600;
-    text-align: center;
+/* Headings */
+.photography h1,
+.photography h2,
+.photography h3,
+.photography h4{
+  font-family:"Playfair Display",serif;
+  color:var(--ink);
+  font-weight:600;
+  text-align:center;
 }
 
-.photography h3 {
-    color: #2F4F4F;
-    font-family: "Playfair Display", serif;
-    font-size: 7vw;
-    margin: 2vw 0;
-    font-weight: 600;
-    border-bottom: 0.4vw solid #4A4A4A;
-    text-align: center;
+.photography h4{ font-size:clamp(1rem,2.6vw,1.4rem); margin:1rem 0; }
+.photography h3{
+  font-size:clamp(1.25rem,3vw,2rem);
+  margin:1.25rem 0;
+  border-bottom:3px solid var(--rule);
+  padding-bottom:.35rem;
+}
+.photography h2{
+  font-size:clamp(1.5rem,3.8vw,2.4rem);
+  margin:1.25rem 0;
 }
 
-.photography h2 {
-    color: #2F4F4F;
-    font-family: "Playfair Display", serif;
-    font-size: 7vw;
-    text-align: center;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    font-weight: 600;
-    border-bottom: 1.8vw solid #4A4A4A;
+/* Body text (scope both sides of selector) */
+.photography p,
+.photography figcaption{
+  font-size:clamp(1rem,2.6vw,1.125rem);
+  color:var(--text);
 }
 
-.photography p, figcaption {
-    font-family: "EB Garamond", "Playfair Display", serif;
-    line-height: 1.5;
-    font-size: 4vw;
-    color: #333333;
+/* Links */
+.photography a{ text-decoration:none; font-weight:700; color:var(--link); }
+.photography a:hover{ color:var(--link-hover); }
+
+/* Title padding */
+#photography-title{ padding:1vw 0 0 0; }
+
+/* Region/Country/City layout */
+#photography .region{ margin:2rem 0; }
+#photography .country{ margin-left:1.5rem; }
+#photography .city{ margin-left:3rem; }
+
+/* Gallery */
+.gallery{
+  display:flex; flex-wrap:wrap; justify-content:space-around; align-items:flex-start;
+  margin:10px 0; width:100%;
+}
+.gallery img{
+  flex-basis:200px; height:auto; margin:10px;
+  transition:transform .3s ease, box-shadow .3s ease;
+  border-radius:5px; cursor:pointer;
+}
+.gallery img:hover{ transform:scale(1.05); box-shadow:0 12px 20px rgba(0,0,0,.4); }
+
+/* Captions (scoped) */
+.photography figcaption{
+  color:#2A2A2A; font-family:"Playfair Display",serif;
+  font-size:1rem; max-width:200px; margin-top:.5rem; text-align:center; word-wrap:break-word;
 }
 
-.photography a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #774b4b;
+/* Responsive */
+@media (min-width:768px){
+  .gallery img{ flex-basis:250px; }
+  .photography figcaption{ font-size:1.1rem; max-width:250px; }
 }
 
-.photography a:hover {
-    color: #2E8B57; /* Hover color for links */
+@media (max-width:768px){
+  .gallery img{ flex-basis:150px; }
+  .photography figcaption{ font-size:.95rem; max-height:4rem; }
 }
 
-
-/* Layout for title and description */
-#photography-title {
-    padding: 1vw 0 0 0;
-}
-
-
-/* Layout for region, country, and city */
-#photography .region {
-    margin: 2rem 0;
-}
-
-#photography .country {
-    margin-left: 1.5rem;
-}
-
-#photography .city {
-    margin-left: 3rem;
-}
-
-/* Gallery Styling for Photography Page */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start; /* Align images to the top of the row */
-    margin: 10px 0; /* Spacing around the gallery */
-    width: 100%; /* Full width of the parent container */
-}
-
-.gallery img {
-    flex-basis: 200px;
-    height: auto;
-    margin: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.gallery img:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
-}
-
-/* Caption Styling */
-figcaption {
-    color: #2A2A2A;
-    font-family: "Playfair Display", serif;
-    font-size: 1rem; /* Consistent size */
-    max-width: 200px; /* Match image width */
-    margin-top: 0.5rem;
-    text-align: center;
-    word-wrap: break-word;
-}
-
-
-/* Responsive Layout */
-@media screen and (min-width: 768px) {
-    .gallery img {
-        flex-basis: 250px; /* Increase the size of images on larger screens */
-        height: auto;
-    }
-
-    figcaption {
-        font-size: 1.2rem; /* Slightly larger captions on bigger screens */
-        max-width: 250px; /* Ensure captions match image width */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .gallery img {
-        flex-basis: 150px; /* Shrink images for smaller screens */
-        height: auto;
-    }
-
-    figcaption {
-        font-size: 0.9rem; /* Slightly smaller captions */
-        max-height: 4rem; /* Adjust height for smaller screens */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .gallery img {
-        flex-basis: 100px; /* Further shrink images for mobile screens */
-        height: auto;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    h1 {
-        font-size: 3rem; /* Adjusted size for desktop */
-    }
-    h2 {
-        font-size: 2.5rem; /* Adjusted size for desktop */
-    }
-    h3 {
-        font-size: 2rem; /* Adjusted size for desktop */
-    }
-    h4 {
-        font-size: 1.75rem; /* Adjusted size for desktop */
-    }
-    p, li, figcaption {
-        font-size: 1rem; /* Adjusted size for desktop */
-    }
+@media (max-width:480px){
+  .gallery img{ flex-basis:100px; }
 }
