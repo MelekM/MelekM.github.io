@@ -1,89 +1,28 @@
-/* ---------------------------------
-   Photography (scoped/fixed)
-   --------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap');
+/* -----------------------------
+   PHOTOGRAPHY PAGE ONLY
+   ----------------------------- */
 
-:root{
-  --ink:#2F4F4F;
-  --rule:#4A4A4A;
-  --text:#333;
-  --link:#774b4b;
-  --link-hover:#2E8B57;
-}
-
-.photography{ font-family:"EB Garamond","Playfair Display",serif; color:var(--text); line-height:1.6; }
-
-/* Headings */
-.photography h1,
-.photography h2,
-.photography h3,
-.photography h4{
-  font-family:"Playfair Display",serif;
-  color:var(--ink);
-  font-weight:600;
+.photography h1, .photography h2{
   text-align:center;
 }
 
-.photography h4{ font-size:clamp(1rem,2.6vw,1.4rem); margin:1rem 0; }
-.photography h3{
-  font-size:clamp(1.25rem,3vw,2rem);
-  margin:1.25rem 0;
-  border-bottom:3px solid var(--rule);
-  padding-bottom:.35rem;
-}
-.photography h2{
-  font-size:clamp(1.5rem,3.8vw,2.4rem);
-  margin:1.25rem 0;
-}
-
-/* Body text (scope both sides of selector) */
-.photography p,
-.photography figcaption{
-  font-size:clamp(1rem,2.6vw,1.125rem);
-  color:var(--text);
-}
-
-/* Links */
-.photography a{ text-decoration:none; font-weight:700; color:var(--link); }
-.photography a:hover{ color:var(--link-hover); }
-
-/* Title padding */
-#photography-title{ padding:1vw 0 0 0; }
-
-/* Region/Country/City layout */
-#photography .region{ margin:2rem 0; }
-#photography .country{ margin-left:1.5rem; }
-#photography .city{ margin-left:3rem; }
-
-/* Gallery */
+/* Photo grid */
 .gallery{
-  display:flex; flex-wrap:wrap; justify-content:space-around; align-items:flex-start;
-  margin:10px 0; width:100%;
+  display:flex; flex-wrap:wrap; gap:12px;
+  justify-content:center; align-items:flex-start; margin:1rem 0 2rem;
 }
+.gallery figure{ width:min(260px,46%); margin:0; }
 .gallery img{
-  flex-basis:200px; height:auto; margin:10px;
-  transition:transform .3s ease, box-shadow .3s ease;
-  border-radius:5px; cursor:pointer;
+  width:100%; border-radius:6px;
+  transition:transform .25s, box-shadow .25s;
 }
-.gallery img:hover{ transform:scale(1.05); box-shadow:0 12px 20px rgba(0,0,0,.4); }
-
-/* Captions (scoped) */
-.photography figcaption{
-  color:#2A2A2A; font-family:"Playfair Display",serif;
-  font-size:1rem; max-width:200px; margin-top:.5rem; text-align:center; word-wrap:break-word;
+.gallery img:hover{
+  transform:scale(1.02);
+  box-shadow:0 10px 22px rgba(0,0,0,.22);
 }
-
-/* Responsive */
-@media (min-width:768px){
-  .gallery img{ flex-basis:250px; }
-  .photography figcaption{ font-size:1.1rem; max-width:250px; }
+.gallery figcaption{
+  text-align:center; color:#2A2A2A; font-size:.98rem; margin-top:.4rem;
 }
-
-@media (max-width:768px){
-  .gallery img{ flex-basis:150px; }
-  .photography figcaption{ font-size:.95rem; max-height:4rem; }
-}
-
-@media (max-width:480px){
-  .gallery img{ flex-basis:100px; }
+@media (max-width:520px){
+  .gallery figure{ width:100%; }
 }
