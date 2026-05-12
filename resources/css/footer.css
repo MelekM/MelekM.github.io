@@ -1,50 +1,24 @@
-/* Footer styling */
-footer {
-    background-color: #111111;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: relative;
-    width: 100%;
+footer{
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1.1rem 1rem 1.3rem;
+  text-align: center;
+  color: #94a3b8;
+  background: rgba(15, 23, 42, 0.96);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-footer p {
-    font-family: Georgia, Helvetica, sans-serif;
-    font-size: 1.1rem;
-    margin: 0;
-    padding: 5px;
-    color: #ddd;
-    transition: color 0.3s ease;
+footer p{
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  color: #cbd5e1;
 }
 
-footer p:hover {
-    color: white; /* Matches the hover color in navbar */
+footer a{
+  color: #e2e8f0;
 }
 
-footer a {
-    color: #ddd;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #2E8B57; /* Matches hover style */
-}
-
-@media screen and (min-width: 1024px) {
-    h1 {
-        font-size: 3rem; /* Adjusted size for desktop */
-    }
-    h2 {
-        font-size: 2.5rem; /* Adjusted size for desktop */
-    }
-    h3 {
-        font-size: 2rem; /* Adjusted size for desktop */
-    }
-    h4 {
-        font-size: 1.75rem; /* Adjusted size for desktop */
-    }
-    p, li, figcaption {
-        font-size: 1rem; /* Adjusted size for desktop */
-    }
+footer a:hover{
+  color: #8bd3c7;
 }

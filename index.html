@@ -2,114 +2,74 @@
 <html lang="en">
 
 <head>
-    <title>Mizher Portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="resources/css/index.css" type="text/css" rel="stylesheet"/>
+  <title>Mizher Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="resources/css/index.css" type="text/css" rel="stylesheet">
 
-    <!-- Javascript Section -->
-    <script src="resources/js/menu.js"></script>
-    <script src="resources/js/menutoggle_smoothscroll.js"></script>
+  <script src="resources/js/menu.js"></script>
+  <script src="resources/js/menutoggle_smoothscroll.js"></script>
 
-    <!-- DM Serif Display, and Playfair Display Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<!-- Navbar (Include here or through a server-side include) -->
-<div data-include="resources/utils/navbar.html"></div>
+  <div data-include="resources/utils/navbar.html"></div>
 
-<!-- Hero Section -->
-<section id="hero" class="hero">
+  <section class="hero hero--home">
     <div class="hero-content">
-        <h1>Melek Mizher</h1>
-        <p>Data Scientist | AI Enthusiast | Photographer | Polyglot</p>
+      <p class="eyebrow">Data Science, AI, Photography</p>
+      <h1>Melek Mizher</h1>
+      <p>I build data-driven solutions, explore machine learning, and capture the places and moments that keep the work human.</p>
+      <div class="hero-actions">
+        <a class="button button--solid" href="/portfolio.html">View Projects</a>
+        <a class="button button--ghost" href="/photography.html">See Photography</a>
+      </div>
     </div>
-</section>
+  </section>
 
-<div class="container">
-    <!-- Introduction Section -->
+  <main class="container">
     <section id="introduction">
-        <!--<h2>Introduction</h2>-->
-        <div class="intro">
-            <h3></h3>
-            <!--<img id="profile" src="resources/images/profile.jpeg" alt="Melek Mizher">-->
-            <p>I'm a data scientist with a strong foundation in biomedical
-                sciences, technology, and analytics.</p>
-            <h2></h2>
-            <p>I’m driven by a passion to find creative solutions to solve complex problems
-                and create impactful solutions.</p>
-        <h3></h3>
+      <div class="split">
+        <p class="eyebrow">About the work</p>
+        <p>I'm a data scientist with a strong foundation in biomedical sciences, technology, and analytics.</p>
+        <p>I’m driven by a passion for creative problem solving, whether that means building models, shaping visual narratives, or turning messy data into something useful.</p>
+        <div class="pill-row" aria-label="Highlights">
+          <span class="pill">Machine learning</span>
+          <span class="pill">Data visualization</span>
+          <span class="pill">Biomedical science</span>
+          <span class="pill">Photography</span>
         </div>
+      </div>
     </section>
-</div>
 
-<section id="break">
-    <div id="second-hero">
-        <p>Learn more about my favorite</p><a href="portfolio.html">Projects</a>
-        <p>Scroll down to learn more about me</p>
-    </div>
-</section>
-
-<div class="container">
-
-    <!-- Professional Journey Section -->
     <section id="professional-journey">
-        <h3></h3>
-        <h2>Professional Journey</h2>
-        <p>
-            My journey into data science began with a passion for technology and problem-solving,
-            which led me to earn a Master's degree in Data Science/AI from Northwestern University.
-            I specialize in using data to generate insights and develop solutions. I’ve worked on projects ranging from algorithmic optimization to predictive modeling,
-            focusing on applying data analytics and visualization to solve real-world challenges.
-        </p>
-        <h2></h2>
-        <p>
-            During my studies, I developed a strong interest in algorithmic problem-solving,
-            applying this to the projects displayed in this portfolio. I’ve worked on optimizing
-            processes, creating efficient algorithms, and tackling real-world problems through data-driven
-            methods. These projects helped refine my approach to problem-solving, from initial data collection
-            to deploying solutions. This has allowed me to refine my skills across diverse fields,
-            giving me a well-rounded understanding of data science and its applications.
-        </p>
-        <h2></h2>
-        <p>
-            My expertise extends to big data analysis, creating models, and using data-driven approaches
-            to tackle complex issues. I’ve developed a strong foundation in machine learning, statistical analysis,
-            and data visualization, which I’ve applied across projects from multiple fields. Whether it’s optimizing processes
-            or uncovering insights from complex datasets, I’m passionate about leveraging data science to drive
-            impactful solutions and innovation.
-        </p>
-        <h3></h3>
+      <p class="eyebrow">Professional journey</p>
+      <h2>Professional Journey</h2>
+      <p>My journey into data science began with a passion for technology and problem-solving, which led me to earn a Master's degree in Data Science and AI from Northwestern University. I specialize in using data to generate insights and develop solutions, and I’ve worked on projects ranging from algorithmic optimization to predictive modeling.</p>
+      <p>During my studies, I developed a strong interest in algorithmic problem-solving and applied that interest to projects in this portfolio. Working across research, modeling, and visualization sharpened my ability to move from raw information to practical decisions.</p>
+      <p>My expertise extends to big data analysis, creating models, and using data-driven approaches to tackle complex issues. I enjoy combining rigor with clarity so the final result is useful, legible, and grounded in the problem it was meant to solve.</p>
     </section>
-    <section id="break2">
-        <div class="text second-hero">
-            <p>This is how I take up the Space that I need</p>
-        </div>
+
+    <section id="break" aria-label="Portfolio callout">
+      <div id="second-hero">
+        <p>Explore the projects that sit behind the process.</p>
+        <a href="/portfolio.html">Projects</a>
+      </div>
     </section>
-    <!-- Personal Interests Section -->
+
     <section class="personal-interests">
-        <h3></h3>
-        <h2>Personal Interests</h2>
-        <p>When I'm not immersed in data or a project, I enjoy photography, video games, and sports.
-            I discovered my love for capturing the world through a lens during a childhood family trip,
-            and since then, it's become one of my greatest passions. You can view some of my favorite
-            photos in the <a href="/photography.html">Photography</a> section.</p>
-        <h2></h2>
-        <p>I’m a language enthusiast. Growing up bilingual in Spanish and Arabic, I later
-            picked up English, Portuguese, and Turkish. I am also learning French and Dutch.</p>
-        <h3></h3>
+      <p class="eyebrow">Personal interests</p>
+      <h2>Personal Interests</h2>
+      <p>When I'm not immersed in data or a project, I enjoy photography, video games, and sports. I discovered my love for capturing the world through a lens during a childhood family trip, and since then it has become one of my favorite ways to slow down and pay attention.</p>
+      <p>I’m also a language enthusiast. Growing up bilingual in Spanish and Arabic, I later picked up English, Portuguese, and Turkish, and I am currently learning French and Dutch.</p>
     </section>
-</div>
+  </main>
 
-</body>
-
-<!-- Footer (Include here or through a server-side include) -->
-<footer>
+  <footer>
     <div data-include="resources/utils/footer.html"></div>
-</footer>
+  </footer>
+</body>
 </html>
-
