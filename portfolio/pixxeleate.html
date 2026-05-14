@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pixxeleate Platform Backend</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/resources/css/index.css" type="text/css" rel="stylesheet"/>
+    <link href="/resources/css/portfolio.css" type="text/css" rel="stylesheet"/>
+
+    <script src="/resources/js/menu.js"></script>
+    <script src="/resources/js/menutoggle_smoothscroll.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div data-include="/resources/utils/navbar.html"></div>
+
+<div class="container">
+    <section class="project-detail">
+        <h2></h2>
+        <h2>Pixxeleate Platform Backend</h2>
+        <p>Pixxeleate is a private backend for an image-to-canvas platform that converts uploaded customer images into palette-constrained paint-by-dots previews and print-safe guides. The project combines API design, image processing, cloud-ready deployment, and internal operational tooling in one Django-based service.</p>
+
+        <h2></h2>
+        <h2>Project Goals</h2>
+        <ul>
+            <li>Accept uploaded images and storefront preview requests through a clean backend API.</li>
+            <li>Generate deterministic previews and printable guides based on palette, canvas size, and rendering settings.</li>
+            <li>Support operational review through a browser dashboard for manual runs, palette management, and recent job inspection.</li>
+            <li>Keep the same core pipeline usable in local development and cloud deployment environments.</li>
+        </ul>
+
+        <h2></h2>
+        <h2>System Architecture</h2>
+        <p>The application is built on Django and Django REST Framework, with an image-processing engine split into focused modules for loading, resizing, palette mapping, dot-plan generation, preview rendering, and guide rendering. That separation keeps the processing pipeline easier to test and evolve without tightly coupling business logic to HTTP views.</p>
+        <p>The backend also includes storage and metadata adapters so jobs can run against local files during development or cloud-backed services in deployment. A browser dashboard exposes manual processing controls, palette and guide-style management, and recent job inspection for faster iteration and debugging.</p>
+
+        <h2></h2>
+        <h2>Challenges and Solutions</h2>
+        <p><strong>Challenge:</strong> Balancing interactive preview speed with print-safe output quality.</p>
+        <p><strong>Solution:</strong> The pipeline separates lightweight preview generation from higher-fidelity printable output, while still using a shared processing core so both paths remain consistent.</p>
+        <p><strong>Challenge:</strong> Supporting both local testing and cloud deployment without rewriting storage logic.</p>
+        <p><strong>Solution:</strong> The backend uses adapter-style publishing and metadata layers, allowing the same processing request flow to target local files or cloud services.</p>
+        <p><strong>Challenge:</strong> Handling event-driven order processing safely.</p>
+        <p><strong>Solution:</strong> The service validates inbound requests, normalizes payloads, and stores order state idempotently before triggering downstream processing steps.</p>
+
+        <h2></h2>
+        <h2>Technologies and Tools Used</h2>
+        <p><strong>Languages/Technologies:</strong> Python, Django, Django REST Framework</p>
+        <p><strong>Infrastructure:</strong> PostgreSQL, SQLite, Firestore, Google Cloud Storage, Cloud Run</p>
+        <p><strong>Image Processing:</strong> Pillow, pillow-heif, custom palette mapping and guide rendering modules</p>
+        <p><strong>Other Tools:</strong> Docker, internal dashboard tooling, webhook-driven integrations</p>
+
+        <h2></h2>
+        <h2>Key Results</h2>
+        <ul>
+            <li>Delivered an MVP backend that supports upload-to-preview processing, dashboard-based testing, and order-oriented job tracking.</li>
+            <li>Established a reusable processing core with clear seams between API endpoints, rendering logic, storage, and metadata persistence.</li>
+            <li>Created a deployment path that supports both local development workflows and cloud-hosted operation without duplicating the pipeline.</li>
+        </ul>
+
+        <h2></h2>
+        <h2>Technical Notes</h2>
+        <p>This portfolio summary intentionally omits credentials, vendor secrets, private operational settings, and fulfillment-specific implementation details. The repository is private because the project is tied to a real commercial product and live operational workflows.</p>
+
+        <h2></h2>
+        <a href="https://pixxeleate.com" target="_blank">Visit the Pixxeleate Website</a>
+        <h2></h2>
+        <a href="/portfolio.html">Back to Portfolio</a>
+        <h2></h2>
+    </section>
+</div>
+
+<footer>
+    <div data-include="/resources/utils/footer.html"></div>
+</footer>
+</body>
+</html>
