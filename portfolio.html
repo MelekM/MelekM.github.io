@@ -20,109 +20,101 @@
 </head>
 
 <body>
-<!-- Navbar -->
 <div data-include="resources/utils/navbar.html"></div>
 
-<!-- Portfolio Section -->
-<div class="container">
-    <section class="portfolio">
-        <h3></h3>
+<main class="container">
+    <section class="page-intro surface">
+        <p class="eyebrow">Selected work</p>
         <h1>Featured Projects</h1>
-
-        <!-- Project 1 -->
-        <h3></h3>
-        <div class="project">
-            <h2><a href="/portfolio/pixxeleate.html">Pixxeleate Platform Backend</a></h2>
-            <p>This private production-facing backend powers an image-to-canvas workflow that transforms uploaded photos into palette-constrained paint-by-dots previews and print-safe guides. The system combines a Django API, custom image-processing modules, cloud storage adapters, and dashboard tooling for testing and operational review.</p>
-            <p><strong>Technologies:</strong> Django, Python, REST APIs, image processing, cloud storage, webhook orchestration.</p>
-            <a href="/portfolio/pixxeleate.html">Read More</a>
-        </div>
-        <h3></h3>
-
-        <!-- Project 2 -->
-        <div class="project">
-            <h2><a href="/portfolio/cancer-malignancy.html">Breast Cancer Malignancy Diagnostics using Neural Networks</a></h2>
-            <p>This project applies multiple statistical learning techniques to model breast cancer malignancy using cellular nuclei measurements. It compares classical statistical methods and deep neural networks to improve diagnosis accuracy, with careful parameter tuning yielding the highest accuracy using neural networks.</p>
-            <p><strong>Key Skills:</strong> Data Analysis, Neural Networks, Medical Diagnostics, Feature Engineering.</p>
-            <a href="/portfolio/cancer-malignancy.html">Read More</a>
-        </div>
-        <h3></h3>
-
-        <!-- Project 3 -->
-        <div class="project">
-            <h2><a href="/portfolio/carbon-footprint.html">The Carbon Footprint of Trade</a></h2>
-            <p>
-                This project investigates the environmental impact of international trade in OECD countries. Utilizing data from the OECD, we analyzed carbon emissions embodied in both import and export activities. The findings revealed stark differences between OECD and non-OECD countries, with critical implications for future trade policies.
-            </p>
-            <p><strong>Technologies:</strong> Data Visualization, Environmental Analysis, International Trade Data.</p>
-            <a href="/portfolio/carbon-footprint.html">Read More</a>
-        </div>
-        <h3></h3>
-
-        <!-- Project 4 -->
-        <div class="project">
-            <h2><a href="/portfolio/redistricting.html">Washington State Algorithmic Redistricting</a></h2>
-            <p>
-                In this project, I collaborated on the development of an optimized redistricting plan for Washington State. Using algorithmic methods, we aimed to balance population distribution while maintaining electoral fairness. This project showcased my ability to apply machine learning techniques to real-world political problems.
-            </p>
-            <p><strong>Technologies:</strong> Machine Learning, Algorithmic Optimization, Geographic Data Analysis.</p>
-            <a href="/portfolio/redistricting.html">Read More</a>
-        </div>
-        <h3></h3>
-
-        <div class="project">
-            <h2><a href="/portfolio/lp-recognition.html">License Plate Recognition using Computer Vision and Optical Character Recognition</a></h2>
-            <p>This project explores an Automatic License Plate Recognition pipeline that combines object detection and optical character recognition to localize plates and extract alphanumeric text from real-world vehicle imagery.</p>
-            <p><strong>Technologies:</strong> Computer Vision, OCR, YOLOv8, OpenCV, Python.</p>
-            <a href="/portfolio/lp-recognition.html">Read More</a>
-        </div>
-        <h3></h3>
-
-        <div class="project">
-            <h2><a href="/portfolio/dogs-vs-cats.html">Dogs vs. Cats Computer Vision Classification</a></h2>
-            <p>This deep-learning project uses convolutional neural networks to classify animal images, with attention to image preprocessing, model iteration, and benchmark-style evaluation.</p>
-            <p><strong>Technologies:</strong> TensorFlow, Keras, CNNs, image data pipelines, Python.</p>
-            <a href="/portfolio/dogs-vs-cats.html">Read More</a>
-        </div>
-        <h3></h3>
-
-        <!-- Project 5 -->
-        <div class="project">
-            <h2><a href="/portfolio/walter.html">Walter Chemistry Chatbot</a></h2>
-            <p>Walter is a domain-focused chemistry chatbot designed to answer subject-specific questions and support educational interactions through natural language processing and conversational application design.</p>
-            <p><strong>Technologies:</strong> NLP, conversational AI, Python, TensorFlow, Flask.</p>
-            <a href="/portfolio/walter.html">Read More</a>
-        </div>
-        <!-- Project 6 -->
-        <h3></h3>
-        <div class="project">
-            <h2><a href="/portfolio/real-estate.html">The Multifamily Real Estate Development Process: An Optimization Approach to Development Evaluation</a></h2>
-            <p>This project presents an optimization framework for evaluating multifamily development opportunities by combining land-use analysis, predictive modeling, and feasibility-oriented decision support.</p>
-            <p><strong>Technologies:</strong> Optimization, linear programming, predictive modeling, Python.</p>
-            <a href="/portfolio/real-estate.html">Read More</a>
-        </div>
-        <h3></h3>
-
-        <!-- Project 7 -->
-        <div class="project">
-            <h2><a href="/portfolio/data-visualization.html">Data Visualization Studies and Interactive Storytelling</a></h2>
-            <p>This collection brings together interactive and notebook-based visualization work across temporal, categorical, and hierarchical data, with an emphasis on analytical clarity and narrative structure.</p>
-            <p><strong>Technologies:</strong> Data visualization, exploratory analysis, notebook workflows, interactive web graphics.</p>
-            <a href="/portfolio/data-visualization.html">Read More</a>
-        </div>
-        <h3></h3>
-
-        <div class="project">
-            <h2><a href="/portfolio/disaster-tweets.html">Disaster Tweet NLP Classification</a></h2>
-            <p>This NLP project classifies short social-media posts related to real disasters, combining text preprocessing with recurrent and transformer-era modeling experiments in a benchmark setting.</p>
-            <p><strong>Technologies:</strong> NLP, LSTMs, BERT experimentation, NLTK, spaCy, Python.</p>
-            <a href="/portfolio/disaster-tweets.html">Read More</a>
-        </div>
+        <p class="lead">A mix of applied AI, optimization, visualization, and production-oriented systems work.</p>
+        <p>The portfolio leans toward projects that show how I think through real problems: building models, shaping decision support, and turning experimentation into something practical.</p>
     </section>
 
-</div>
+    <section class="portfolio">
+        <div class="portfolio-grid">
+        <article class="project">
+            <p class="project-kicker">Production AI tooling</p>
+            <h2><a href="/portfolio/pixxeleate.html">Pixxeleate Platform Backend</a></h2>
+            <p>This private production-facing backend powers an image-to-canvas workflow that transforms uploaded photos into palette-constrained paint-by-dots previews and print-safe guides. The system combines a Django API, custom image-processing modules, cloud storage adapters, and dashboard tooling for testing and operational review.</p>
+            <p class="project-tech"><strong>Technologies:</strong> Django, Python, REST APIs, image processing, cloud storage, webhook orchestration.</p>
+            <a href="/portfolio/pixxeleate.html">Read More</a>
+        </article>
 
-<!-- Footer -->
+        <article class="project">
+            <p class="project-kicker">Healthcare machine learning</p>
+            <h2><a href="/portfolio/cancer-malignancy.html">Breast Cancer Malignancy Diagnostics using Neural Networks</a></h2>
+            <p>This project applies multiple statistical learning techniques to model breast cancer malignancy using cellular nuclei measurements. It compares classical statistical methods and deep neural networks to improve diagnosis accuracy, with careful parameter tuning yielding the highest accuracy using neural networks.</p>
+            <p class="project-tech"><strong>Key Skills:</strong> Data Analysis, Neural Networks, Medical Diagnostics, Feature Engineering.</p>
+            <a href="/portfolio/cancer-malignancy.html">Read More</a>
+        </article>
+
+        <article class="project">
+            <p class="project-kicker">Analytical storytelling</p>
+            <h2><a href="/portfolio/carbon-footprint.html">The Carbon Footprint of Trade</a></h2>
+            <p>This project investigates the environmental impact of international trade in OECD countries. Using OECD data, it examines carbon emissions embodied in both imports and exports and frames the results through a policy-oriented narrative.</p>
+            <p class="project-tech"><strong>Technologies:</strong> Data visualization, environmental analysis, international trade data.</p>
+            <a href="/portfolio/carbon-footprint.html">Read More</a>
+        </article>
+
+        <article class="project">
+            <p class="project-kicker">Optimization and public policy</p>
+            <h2><a href="/portfolio/redistricting.html">Washington State Algorithmic Redistricting</a></h2>
+            <p>In this project, I collaborated on an optimized redistricting plan for Washington State, balancing population distribution and fairness-oriented constraints through algorithmic modeling.</p>
+            <p class="project-tech"><strong>Technologies:</strong> Decision analytics, algorithmic optimization, geographic data analysis.</p>
+            <a href="/portfolio/redistricting.html">Read More</a>
+        </article>
+
+        <article class="project">
+            <p class="project-kicker">Computer vision</p>
+            <h2><a href="/portfolio/lp-recognition.html">License Plate Recognition using Computer Vision and Optical Character Recognition</a></h2>
+            <p>This project explores an Automatic License Plate Recognition pipeline that combines object detection and optical character recognition to localize plates and extract alphanumeric text from real-world vehicle imagery.</p>
+            <p class="project-tech"><strong>Technologies:</strong> Computer vision, OCR, YOLOv8, OpenCV, Python.</p>
+            <a href="/portfolio/lp-recognition.html">Read More</a>
+        </article>
+
+        <article class="project">
+            <p class="project-kicker">Deep learning</p>
+            <h2><a href="/portfolio/dogs-vs-cats.html">Dogs vs. Cats Computer Vision Classification</a></h2>
+            <p>This deep-learning project uses convolutional neural networks to classify animal images, with attention to image preprocessing, model iteration, and benchmark-style evaluation.</p>
+            <p class="project-tech"><strong>Technologies:</strong> TensorFlow, Keras, CNNs, image data pipelines, Python.</p>
+            <a href="/portfolio/dogs-vs-cats.html">Read More</a>
+        </article>
+
+        <article class="project">
+            <p class="project-kicker">NLP and education</p>
+            <h2><a href="/portfolio/walter.html">Walter Chemistry Chatbot</a></h2>
+            <p>Walter is a domain-focused chemistry chatbot designed to answer subject-specific questions and support educational interactions through natural language processing and conversational application design.</p>
+            <p class="project-tech"><strong>Technologies:</strong> NLP, conversational AI, Python, TensorFlow, Flask.</p>
+            <a href="/portfolio/walter.html">Read More</a>
+        </article>
+
+        <article class="project">
+            <p class="project-kicker">Optimization and real estate</p>
+            <h2><a href="/portfolio/real-estate.html">The Multifamily Real Estate Development Process: An Optimization Approach to Development Evaluation</a></h2>
+            <p>This project presents an optimization framework for evaluating multifamily development opportunities by combining land-use analysis, predictive modeling, and feasibility-oriented decision support.</p>
+            <p class="project-tech"><strong>Technologies:</strong> Optimization, linear programming, predictive modeling, Python.</p>
+            <a href="/portfolio/real-estate.html">Read More</a>
+        </article>
+
+        <article class="project">
+            <p class="project-kicker">Visual communication</p>
+            <h2><a href="/portfolio/data-visualization.html">Data Visualization Studies and Interactive Storytelling</a></h2>
+            <p>This collection brings together interactive and notebook-based visualization work across temporal, categorical, and hierarchical data, with an emphasis on analytical clarity and narrative structure.</p>
+            <p class="project-tech"><strong>Technologies:</strong> Data visualization, exploratory analysis, notebook workflows, interactive web graphics.</p>
+            <a href="/portfolio/data-visualization.html">Read More</a>
+        </article>
+
+        <article class="project">
+            <p class="project-kicker">Benchmark NLP</p>
+            <h2><a href="/portfolio/disaster-tweets.html">Disaster Tweet NLP Classification</a></h2>
+            <p>This NLP project classifies short social-media posts related to real disasters, combining text preprocessing with recurrent and transformer-era modeling experiments in a benchmark setting.</p>
+            <p class="project-tech"><strong>Technologies:</strong> NLP, LSTMs, BERT experimentation, NLTK, spaCy, Python.</p>
+            <a href="/portfolio/disaster-tweets.html">Read More</a>
+        </article>
+        </div>
+    </section>
+</main>
+
 <footer>
     <div data-include="resources/utils/footer.html"></div>
 </footer>

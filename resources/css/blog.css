@@ -1,23 +1,6 @@
-#blog{
+.notice-card ul{
+  margin-left: 1.1rem;
+  padding-left: 0.35rem;
   display: grid;
-  gap: 1rem;
-  max-width: 68ch;
-}
-
-#blog p{
-  color: var(--muted);
-}
-
-#blog h1{
-  margin: 0;
-}
-
-#blog h2{
-  font-size: clamp(1.45rem, 3.4vw, 2.2rem);
-}
-
-#blog h3{
-  text-align: left;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 0.35rem;
+  gap: 0.35rem;
 }

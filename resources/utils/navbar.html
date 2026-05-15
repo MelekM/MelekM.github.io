@@ -6,23 +6,18 @@
   </head>
   <body>
     <nav>
-      <button class="hamburger" type="button" aria-label="Toggle navigation" onclick="toggleMenu()">&#9776;</button>
-      <ul class="nav-links">
-        <li class="banner_tab"><a href="/index.html">Home</a></li>
-        <li class="banner_tab"><a href="/about.html">About Me</a></li>
-        <li class="banner_tab"><a href="/portfolio.html">Portfolio</a></li>
-        <li class="banner_tab"><a href="/photography.html">Photography</a></li>
-        <li class="banner_tab"><a href="/blog.html">Blog</a></li>
-        <li class="banner_tab"><a href="/contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-shell">
+        <a class="nav-brand" href="/index.html">Melek Mizher</a>
+        <button class="hamburger" type="button" aria-label="Toggle navigation" onclick="toggleMenu()">&#9776;</button>
+        <ul class="nav-links">
+          <li class="banner_tab"><a href="/index.html">Home</a></li>
+          <li class="banner_tab"><a href="/about.html">About Me</a></li>
+          <li class="banner_tab"><a href="/portfolio.html">Portfolio</a></li>
+          <li class="banner_tab"><a href="/photography.html">Photography</a></li>
+          <li class="banner_tab"><a href="/blog.html">Blog</a></li>
+          <li class="banner_tab"><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
-
-    <script>
-      // Menu toggle function
-      function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-      }
-    </script>
   </body>
 </html>
