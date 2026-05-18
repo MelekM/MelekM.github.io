@@ -14,44 +14,54 @@
 <body>
 <div data-include="/resources/utils/navbar.html"></div>
 
-<div class="container">
-  <section class="project-detail">
-    <h2></h2>
-    <h2>Disaster Tweet NLP Classification</h2>
-    <p>This project classifies short social-media posts related to real disasters, combining classic text preprocessing with recurrent and transformer-era experimentation in a benchmark-style workflow.</p>
-
-    <h2></h2>
-    <h2>Project Goals</h2>
-    <ul>
-      <li>Clean and normalize short, noisy social text for downstream modeling.</li>
-      <li>Compare sequence-based and transformer-informed approaches on the same classification problem.</li>
-      <li>Treat the work as a practical benchmark exercise with measurable submission performance.</li>
-    </ul>
-
-    <h2></h2>
-    <h2>Approach</h2>
-    <p><strong>Preprocessing:</strong> The workflow includes tokenization, stop-word removal, lemmatization, and normalization for tweet-length text.</p>
-    <p><strong>Modeling:</strong> The notebook experiments with LSTM-based sequence models and also brings in BERT-related tooling to explore stronger language representations.</p>
-    <p><strong>Evaluation:</strong> Performance is tracked through benchmark submissions rather than only notebook-local metrics.</p>
-
-    <h2></h2>
-    <h2>Technologies and Tools Used</h2>
-    <p><strong>Languages/Technologies:</strong> Python, natural language processing, text classification</p>
-    <p><strong>Libraries:</strong> TensorFlow, Keras, NLTK, spaCy, transformer tooling</p>
-    <p><strong>Focus Areas:</strong> short-text modeling, sequence learning, benchmark evaluation</p>
-
-    <h2></h2>
-    <h2>Key Results</h2>
-    <ul>
-      <li>Built an end-to-end NLP pipeline for noisy short-form social text.</li>
-      <li>Compared multiple modeling styles instead of anchoring on a single architecture.</li>
-      <li>The notebook records a best Kaggle submission score of 0.77290, which makes it a strong public-benchmark NLP example in the portfolio.</li>
-    </ul>
-
-    <h2></h2>
-    <a href="/portfolio.html">Back to Portfolio</a>
+<main class="container project-case">
+  <section class="project-hero surface">
+    <p class="eyebrow">Benchmark NLP</p>
+    <h1>Disaster Tweet NLP Classification</h1>
+    <p class="lead">A short-text classification project that combines classic NLP preprocessing with LSTM and transformer-era experimentation in a Kaggle-style workflow.</p>
+    <div class="project-meta" aria-label="Project tags">
+      <span>NLP</span>
+      <span>LSTMs</span>
+      <span>spaCy</span>
+      <span>NLTK</span>
+      <span>BERT tooling</span>
+    </div>
+    <div class="case-actions">
+      <a href="/portfolio.html">Back to Portfolio</a>
+    </div>
   </section>
-</div>
+
+  <section class="case-grid">
+    <article class="case-section surface">
+      <h2>Project Goals</h2>
+      <ul>
+        <li>Clean and normalize noisy social text for downstream modeling.</li>
+        <li>Compare sequence-based and transformer-informed approaches on the same classification task.</li>
+        <li>Track performance through benchmark submissions instead of only notebook-local metrics.</li>
+      </ul>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Approach</h2>
+      <p>The workflow includes tokenization, stop-word removal, lemmatization, and normalization for tweet-length text.</p>
+      <p>The notebook experiments with LSTM-based sequence models and also brings in BERT-related tooling to explore richer language representations.</p>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Result</h2>
+      <p>The notebook records a best Kaggle submission score of 0.77290, making this a strong public-benchmark NLP example in the portfolio.</p>
+    </article>
+
+    <article class="case-section surface">
+      <h2>What It Shows</h2>
+      <ul>
+        <li>End-to-end NLP preprocessing for short-form text.</li>
+        <li>Sequence modeling and transformer-era experimentation.</li>
+        <li>Evaluation habits suited to practical applied ML work.</li>
+      </ul>
+    </article>
+  </section>
+</main>
 
 <footer>
   <div data-include="/resources/utils/footer.html"></div>

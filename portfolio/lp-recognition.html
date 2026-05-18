@@ -14,45 +14,54 @@
 <body>
 <div data-include="/resources/utils/navbar.html"></div>
 
-<div class="container">
-  <section class="project-detail">
-    <h2></h2>
-    <h2>License Plate Recognition using Computer Vision and OCR</h2>
-    <p>This project explores an Automatic License Plate Recognition pipeline that combines object detection and optical character recognition to locate vehicle plates and extract text from them under varied imaging conditions.</p>
-
-    <h2></h2>
-    <h2>Project Goals</h2>
-    <ul>
-      <li>Detect license plates reliably across different framing, lighting, and background conditions.</li>
-      <li>Extract plate text from detected regions with a practical OCR workflow.</li>
-      <li>Build a modular computer-vision pipeline that separates detection, cropping, and text recognition.</li>
-    </ul>
-
-    <h2></h2>
-    <h2>Challenges and Solutions</h2>
-    <p><strong>Challenge:</strong> Plates vary in size, angle, contrast, and formatting, which makes end-to-end recognition noisy.</p>
-    <p><strong>Solution:</strong> The project uses a staged pipeline where object detection first isolates the plate region and OCR is then applied to a smaller, more relevant crop.</p>
-    <p><strong>Challenge:</strong> OCR quality falls quickly when detection crops are poor or images are low-light.</p>
-    <p><strong>Solution:</strong> The workflow emphasizes better localization and preprocessing rather than treating OCR as a standalone step.</p>
-
-    <h2></h2>
-    <h2>Technologies and Tools Used</h2>
-    <p><strong>Languages/Technologies:</strong> Python, computer vision, optical character recognition</p>
-    <p><strong>Libraries:</strong> OpenCV, EasyOCR, YOLOv8</p>
-    <p><strong>Approach:</strong> Detection-first ALPR pipeline with post-detection text extraction</p>
-
-    <h2></h2>
-    <h2>Key Results</h2>
-    <ul>
-      <li>Created a workable ALPR prototype that links object detection and OCR into one recognition flow.</li>
-      <li>Demonstrated how model choice and crop quality directly affect downstream OCR accuracy.</li>
-      <li>Produced a strong applied computer-vision case study with real-world constraints rather than idealized input data.</li>
-    </ul>
-
-    <h2></h2>
-    <a href="/portfolio.html">Back to Portfolio</a>
+<main class="container project-case">
+  <section class="project-hero surface">
+    <p class="eyebrow">Computer vision capstone</p>
+    <h1>License Plate Recognition using Computer Vision and OCR</h1>
+    <p class="lead">An Automatic License Plate Recognition pipeline that combines object detection and optical character recognition to locate vehicle plates and extract text from real-world imagery.</p>
+    <div class="project-meta" aria-label="Project tags">
+      <span>YOLOv8</span>
+      <span>OpenCV</span>
+      <span>OCR</span>
+      <span>Python</span>
+    </div>
+    <div class="case-actions">
+      <a href="/portfolio.html">Back to Portfolio</a>
+    </div>
   </section>
-</div>
+
+  <section class="case-grid">
+    <article class="case-section surface">
+      <h2>Project Goals</h2>
+      <ul>
+        <li>Detect license plates across different framing, lighting, and background conditions.</li>
+        <li>Extract alphanumeric plate text from detected regions with a practical OCR workflow.</li>
+        <li>Build a modular pipeline that separates detection, cropping, preprocessing, and recognition.</li>
+      </ul>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Pipeline</h2>
+      <p>The project uses a staged ALPR flow. Object detection first isolates the plate region, then OCR is applied to a smaller and more relevant crop.</p>
+      <p>This structure makes the system easier to debug because OCR quality can be interpreted in the context of localization and preprocessing quality.</p>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Challenges</h2>
+      <ul>
+        <li>Plates vary in size, angle, contrast, background, and formatting.</li>
+        <li>OCR accuracy drops quickly when detection crops are noisy or low contrast.</li>
+        <li>End-to-end performance depends on the interaction between detection and text extraction.</li>
+      </ul>
+    </article>
+
+    <article class="case-section surface">
+      <h2>What It Shows</h2>
+      <p>This is a strong applied computer-vision case study because it deals with an imperfect real-world problem rather than idealized input data.</p>
+      <p>The project demonstrates practical judgment around localization, preprocessing, OCR, and model-evaluation tradeoffs.</p>
+    </article>
+  </section>
+</main>
 
 <footer>
   <div data-include="/resources/utils/footer.html"></div>
