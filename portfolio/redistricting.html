@@ -46,12 +46,31 @@
     <article class="case-section surface">
       <h2>Method</h2>
       <p>The project uses 2020 Census data for Washington State and builds a county adjacency matrix to represent geographic restrictions.</p>
-      <p>Linear programming was then used to reduce population disparity while respecting the structure of the state and the constraints included in the assignment model.</p>
+      <p>Linear programming was then used to assign counties into districts while respecting allocation rules, county minimums, demographic variables, and manually defined geographic cut constraints included in the assignment model.</p>
     </article>
 
     <article class="case-section surface">
       <h2>Result</h2>
-      <p>The optimized plan generated 10 districts with reduced population disparities. The analysis also surfaced remaining tradeoffs, especially in less dense areas where geography limits flexibility.</p>
+      <p>The model generated 10 assigned districts and an interactive map. The population-balance chart also makes the limits of the simplified county-level model visible: district populations are not perfectly balanced, and King County dominates one assignment because the model allocates at county granularity.</p>
+      <p>That honesty helps the project read as decision analytics rather than a polished political map.</p>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Evaluation Framing</h2>
+      <ul>
+        <li>Population balance was reviewed against an equal-population target across 10 districts.</li>
+        <li>County adjacency and geography cuts constrained which counties could plausibly share districts.</li>
+        <li>Demographic proportions were inspected after assignments to understand representation tradeoffs.</li>
+      </ul>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Limitations and Next Steps</h2>
+      <ul>
+        <li>County-level districting is a coarse approximation; real redistricting usually needs precinct or census-block granularity.</li>
+        <li>The model uses simplified constraints and should not be interpreted as a legally compliant districting plan.</li>
+        <li>A stronger next pass would add compactness metrics, contiguity enforcement, Voting Rights Act review, and sensitivity analysis across objective choices.</li>
+      </ul>
     </article>
 
     <article class="case-section surface">
@@ -65,10 +84,20 @@
 
     <article class="case-section case-section--wide surface">
       <h2>Visual Evidence</h2>
-      <figure>
-        <img src="/portfolio/resources/redistricting/Redistricting_Map.png" alt="Washington State redistricting map with optimized district boundaries">
-        <figcaption>Washington State redistricting map with optimized district boundaries.</figcaption>
-      </figure>
+      <div class="visual-grid">
+        <figure>
+          <img src="/portfolio/resources/redistricting/Redistricting_Map.png" alt="Washington State redistricting map with modeled district boundaries">
+          <figcaption>Washington State map from the project output.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/redistricting/district_population_balance.png" alt="Bar chart of modeled district populations compared with equal population target">
+          <figcaption>Generated district-population balance chart from the saved notebook result table.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/redistricting/redistricting_optimization_flow.svg" alt="Conceptual flow diagram for the redistricting optimization model">
+          <figcaption>Conceptual optimization workflow showing inputs, constraints, objective, and outputs.</figcaption>
+        </figure>
+      </div>
     </article>
   </section>
 </main>

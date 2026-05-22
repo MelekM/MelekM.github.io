@@ -18,13 +18,13 @@
   <section class="project-hero surface">
     <p class="eyebrow">NLP and education</p>
     <h1>Walter Chemistry Chatbot</h1>
-    <p class="lead">A chemistry-oriented chatbot project focused on narrow-domain question answering, conversational flow, and the practical application layer around NLP work.</p>
+    <p class="lead">A chemistry-oriented chatbot prototype focused on narrow-domain question answering, corpus grounding, retrieval logic, and the practical application layer around NLP work.</p>
     <div class="project-meta" aria-label="Project tags">
       <span>NLP</span>
-      <span>Chatbot design</span>
+      <span>Semantic retrieval</span>
       <span>Python</span>
-      <span>Flask</span>
-      <span>TensorFlow</span>
+      <span>Sentence transformers</span>
+      <span>Cosine similarity</span>
     </div>
     <div class="case-actions">
       <a href="/portfolio.html">Back to Portfolio</a>
@@ -36,29 +36,68 @@
       <h2>Project Goals</h2>
       <ul>
         <li>Design a chatbot that can respond to chemistry-related questions more effectively than a generic bot.</li>
-        <li>Connect NLP logic to a usable application flow.</li>
+        <li>Ground responses in a fixed chemistry corpus rather than open-ended generation.</li>
+        <li>Connect NLP logic to a usable conversational flow.</li>
         <li>Explore how domain framing improves response quality for educational and research-oriented use cases.</li>
       </ul>
     </article>
 
     <article class="case-section surface">
-      <h2>Why Narrow Domain Matters</h2>
-      <p>General chat systems often struggle with specialized terminology and intent. Walter narrows the problem space to chemistry topics, making the assistant easier to reason about and evaluate.</p>
+      <h2>Data and Inputs</h2>
+      <p>The chemistry corpus contains 118 element records with element name, symbol, atomic number, and cleaned reference text. Source screenshots show question-answer examples such as element summaries, uses, and chemistry relevance prompts.</p>
+      <p>The broader NLP source folder also includes a sentence-transformer semantic chatbot over a separate stocks-and-bonds corpus. I use that as supporting evidence for retrieval-style thinking, while keeping Walter framed as the chemistry-domain project.</p>
     </article>
 
     <article class="case-section surface">
-      <h2>Technical Shape</h2>
-      <p>The project pairs NLP experimentation with a lightweight web application stack, so the assistant can be tested as an interactive tool rather than only a notebook artifact.</p>
-      <p>The result is a more product-oriented AI project that sits between model work and user experience.</p>
+      <h2>Technical Approach</h2>
+      <p>The notebooks use a practical retrieval pattern: preprocess the user question and corpus text, represent text with vector methods such as TF-IDF or sentence embeddings, rank candidate passages with cosine similarity, and return a grounded answer through chatbot response logic.</p>
+      <p>This makes the assistant easier to evaluate than an unconstrained chatbot because failures can be inspected at the corpus, query, ranking, and response layers.</p>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Evaluation Framing</h2>
+      <p>This is best presented as an NLP proof of concept. The strongest evidence is qualitative: saved query-result examples, corpus coverage, and a retrieval pipeline that can be manually reviewed for relevance.</p>
+      <p>A more rigorous next version would add a labeled evaluation set, top-k retrieval review, relevance scoring, and failure categories for ambiguous or out-of-corpus questions.</p>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Limitations</h2>
+      <ul>
+        <li>The chatbot is domain-limited by the corpus and can struggle when questions require synthesis beyond retrieved text.</li>
+        <li>The available evaluation is mostly manual review rather than a large benchmark.</li>
+        <li>The project is credible as a grounded retrieval prototype, not as a production-grade tutor.</li>
+      </ul>
     </article>
 
     <article class="case-section surface">
       <h2>What It Shows</h2>
       <ul>
         <li>Applied NLP in an educational setting.</li>
-        <li>Domain-specific chatbot framing.</li>
-        <li>Ability to connect model logic with a simple user-facing application layer.</li>
+        <li>Domain-specific chatbot framing with a fixed reference corpus.</li>
+        <li>Ability to explain retrieval, similarity ranking, and response logic clearly.</li>
       </ul>
+    </article>
+
+    <article class="case-section case-section--wide surface">
+      <h2>Visual Evidence</h2>
+      <div class="visual-grid">
+        <figure>
+          <img src="/portfolio/resources/walter/semantic_chatbot_pipeline.svg" alt="Conceptual semantic chatbot retrieval flow">
+          <figcaption>Conceptual retrieval flow based on the chatbot notebooks.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/walter/chemistry_corpus_coverage.png" alt="Scatter plot showing chemistry corpus text coverage by atomic number">
+          <figcaption>Generated corpus coverage chart from 118 element records.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/walter/hydrogen_summary_response.png" alt="Walter chatbot hydrogen summary response screenshot">
+          <figcaption>Saved chatbot output for a hydrogen summary query.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/walter/carbon_life_response.png" alt="Walter chatbot response about carbon and life">
+          <figcaption>Saved chatbot output for a chemistry relevance question.</figcaption>
+        </figure>
+      </div>
     </article>
   </section>
 </main>

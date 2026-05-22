@@ -20,7 +20,7 @@
   <section class="project-hero surface">
     <p class="eyebrow">Production AI tooling</p>
     <h1>Pixxeleate Platform Backend</h1>
-    <p class="lead">A private Django backend for an image-to-canvas workflow that turns uploaded customer photos into palette-constrained paint-by-dots previews and print-safe guides.</p>
+    <p class="lead">A private Django backend for an image-to-canvas workflow that turns uploaded photos into palette-constrained paint-by-dots previews and print-oriented guides.</p>
     <div class="project-meta" aria-label="Project tags">
       <span>Django</span>
       <span>Image processing</span>
@@ -36,7 +36,7 @@
   <section class="case-grid">
     <article class="case-section surface">
       <h2>What It Does</h2>
-      <p>Pixxeleate combines API design, image-processing modules, storage adapters, and internal dashboard tooling in one production-facing service. The platform supports upload-to-preview workflows, order-oriented job tracking, and manual review tools for faster testing.</p>
+      <p>Pixxeleate combines API design, image-processing modules, storage adapters, and internal dashboard tooling in one product-oriented service. The platform supports upload-to-preview workflows, order-oriented job tracking, and manual review tools for faster testing.</p>
       <p>The public-facing description intentionally stays architectural. Credentials, vendor secrets, and fulfillment-specific implementation details are omitted because the project is tied to a real commercial workflow.</p>
     </article>
 
@@ -45,7 +45,7 @@
       <ul>
         <li>Accept uploaded images and storefront preview requests through a clean backend API.</li>
         <li>Generate deterministic previews and printable guides from palette, canvas size, and rendering settings.</li>
-        <li>Keep the same processing core usable in local development and cloud deployment.</li>
+        <li>Keep the same processing core usable in local development and cloud-oriented environments.</li>
         <li>Support operational review through dashboard controls and recent job inspection.</li>
       </ul>
     </article>
@@ -53,24 +53,50 @@
     <article class="case-section surface">
       <h2>Technical Shape</h2>
       <p>The application is built with Django and Django REST Framework. The image engine is split into focused modules for loading, resizing, palette mapping, dot-plan generation, preview rendering, and guide rendering.</p>
-      <p>Storage and metadata adapters allow the same request flow to target local files during development or cloud-backed services in deployment.</p>
+      <p>Storage and metadata adapters allow the same request flow to target local files during development or cloud-backed services when configured.</p>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Architecture Framing</h2>
+      <p>The strongest public evidence for this private project is architectural: a backend API coordinates image-processing jobs, persistent artifacts, dashboard review, and external storefront events while keeping the processing core modular.</p>
+      <p>The diagrams below are conceptual and intentionally omit keys, vendor details, fulfillment rules, and sensitive operational steps.</p>
     </article>
 
     <article class="case-section surface">
       <h2>Challenges</h2>
       <ul>
         <li>Balancing interactive preview speed with print-safe output quality.</li>
-        <li>Supporting local testing and cloud deployment without duplicating storage logic.</li>
+        <li>Supporting local testing and cloud-oriented configuration without duplicating storage logic.</li>
         <li>Handling event-driven order processing with validation and idempotent state updates.</li>
       </ul>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Evaluation and Limitations</h2>
+      <p>This is presented as product-oriented engineering work, not as a published ML benchmark. Quality is assessed through deterministic rendering behavior, reproducible processing, dashboard inspection, and workflow reliability.</p>
+      <p>The public page avoids internal business details, private repository links, credentials, fulfillment rules, and vendor-specific implementation notes.</p>
     </article>
 
     <article class="case-section case-section--wide surface">
       <h2>What It Shows</h2>
       <div class="metrics-grid">
-        <p class="metric"><strong>Backend architecture</strong><span>API endpoints, request validation, dashboard tooling, and deployment-ready service boundaries.</span></p>
+        <p class="metric"><strong>Backend architecture</strong><span>API endpoints, request validation, dashboard tooling, and clear service boundaries.</span></p>
         <p class="metric"><strong>Applied image processing</strong><span>Palette mapping, rendering logic, preview generation, and printable guide creation.</span></p>
         <p class="metric"><strong>Product judgment</strong><span>A practical pipeline built around a real customer workflow, not a detached demo.</span></p>
+      </div>
+    </article>
+
+    <article class="case-section case-section--wide surface">
+      <h2>Visual Evidence</h2>
+      <div class="visual-grid">
+        <figure>
+          <img src="/portfolio/resources/pixxeleate/pixxeleate_backend_architecture.svg" alt="Conceptual Pixxeleate backend architecture diagram">
+          <figcaption>Conceptual backend architecture with sensitive implementation details omitted.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/pixxeleate/image_to_canvas_workflow.svg" alt="Conceptual image to canvas processing workflow">
+          <figcaption>Conceptual image-processing workflow from upload to reviewable artifacts.</figcaption>
+        </figure>
       </div>
     </article>
   </section>

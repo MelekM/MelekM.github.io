@@ -37,21 +37,35 @@
         <li>Detect license plates across different framing, lighting, and background conditions.</li>
         <li>Extract alphanumeric plate text from detected regions with a practical OCR workflow.</li>
         <li>Build a modular pipeline that separates detection, cropping, preprocessing, and recognition.</li>
+        <li>Use saved result files to review confidence, exact matches, and failure cases honestly.</li>
       </ul>
     </article>
 
     <article class="case-section surface">
-      <h2>Pipeline</h2>
-      <p>The project uses a staged ALPR flow. Object detection first isolates the plate region, then OCR is applied to a smaller and more relevant crop.</p>
-      <p>This structure makes the system easier to debug because OCR quality can be interpreted in the context of localization and preprocessing quality.</p>
+      <h2>Data and Inputs</h2>
+      <p>The project uses 433 labeled vehicle images from public license-plate datasets, plus saved model outputs in CSV form. The source material includes sample inputs, preprocessing-output visuals, confidence summaries, and prediction-review tables.</p>
+      <p>The page intentionally excludes private keys and vendor-specific notebook configuration. The portfolio focuses on the pipeline, outputs, and evaluation framing.</p>
     </article>
 
     <article class="case-section surface">
-      <h2>Challenges</h2>
+      <h2>Pipeline</h2>
+      <p>The workflow separates detection, cropping, image preprocessing, OCR, and review. Fourier, soft-threshold, and binary preprocessing variants were compared so OCR quality could be debugged in context rather than treated as one opaque end-to-end result.</p>
+      <p>This structure makes the system easier to improve because a bad read can be traced to localization, contrast, preprocessing, character recognition, or post-processing.</p>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Evaluation and Output Review</h2>
+      <p>The saved analysis file includes 360 rows with final predictions. Among 331 rows with both a normalized label and a normalized prediction, 150 were exact OCR matches. I present that as an audit result rather than production accuracy because dataset quality, plate validity, and OCR post-processing all affect the number.</p>
+      <p>The most useful project evidence is the error analysis: high confidence did not always mean a correct full plate, which is a realistic ALPR failure mode.</p>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Limitations and Next Steps</h2>
       <ul>
         <li>Plates vary in size, angle, contrast, background, and formatting.</li>
         <li>OCR accuracy drops quickly when detection crops are noisy or low contrast.</li>
         <li>End-to-end performance depends on the interaction between detection and text extraction.</li>
+        <li>A stronger next version would add plate-format validation, character-level edit distance, more robust crop filtering, and separate detection metrics.</li>
       </ul>
     </article>
 
@@ -59,6 +73,36 @@
       <h2>What It Shows</h2>
       <p>This is a strong applied computer-vision case study because it deals with an imperfect real-world problem rather than idealized input data.</p>
       <p>The project demonstrates practical judgment around localization, preprocessing, OCR, and model-evaluation tradeoffs.</p>
+    </article>
+
+    <article class="case-section case-section--wide surface">
+      <h2>Visual Evidence</h2>
+      <div class="visual-grid">
+        <figure>
+          <img src="/portfolio/resources/lp-recognition/alpr_pipeline.svg" alt="Conceptual ALPR pipeline from vehicle image to OCR review">
+          <figcaption>Conceptual pipeline diagram based on the notebook workflow.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/lp-recognition/alpr_output_review.png" alt="ALPR output review showing exact matches, mismatches, missing predictions, and unscored rows">
+          <figcaption>Generated exact-match audit from the saved analysis CSV.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/lp-recognition/alpr_case_examples.png" alt="Successful and failed license plate OCR examples">
+          <figcaption>One exact-match example and one failure case from the source image set.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/lp-recognition/total_prediction_outcomes.png" alt="Total prediction outcomes from the license plate recognition project">
+          <figcaption>Saved project visualization summarizing prediction outcomes.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/lp-recognition/confidence_score_distribution.png" alt="Confidence score visualization for OCR predictions">
+          <figcaption>Saved confidence-score review from project outputs.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/lp-recognition/fourier_processing_outcomes.png" alt="Fourier preprocessing outcomes for license plate OCR">
+          <figcaption>Preprocessing-output evidence from the Fourier method experiment.</figcaption>
+        </figure>
+      </div>
     </article>
   </section>
 </main>

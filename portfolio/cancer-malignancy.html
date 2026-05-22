@@ -23,13 +23,13 @@
     <p class="lead">A structured-data classification project using cellular nuclei measurements to compare traditional classifiers and neural-network approaches for breast cancer malignancy prediction.</p>
     <div class="project-meta" aria-label="Project tags">
       <span>Neural networks</span>
+      <span>scikit-learn</span>
       <span>Feature engineering</span>
       <span>ROC analysis</span>
       <span>Medical data</span>
     </div>
     <div class="case-actions">
-      <a href="https://github.com/MelekM/Mizher-Data-Science-AI-Portfolio/tree/main/Mizher_Breast_Cancer_Analysis_AI" target="_blank" rel="noreferrer">View Files on GitHub</a>
-      <a class="secondary" href="/portfolio.html">Back to Portfolio</a>
+      <a href="/portfolio.html">Back to Portfolio</a>
     </div>
   </section>
 
@@ -40,6 +40,7 @@
         <li>Compare classical classification methods with neural-network architectures.</li>
         <li>Use feature selection and transformation to improve model inputs.</li>
         <li>Evaluate which cellular measurements were most useful for diagnosis-oriented classification.</li>
+        <li>Frame the work as decision-support modeling, not clinical deployment.</li>
       </ul>
     </article>
 
@@ -51,16 +52,25 @@
 
     <article class="case-section surface">
       <h2>Key Result</h2>
-      <p>The deep neural network run reported the strongest accuracy at 98.25%, while classical methods such as Random Forest and KNN remained competitive.</p>
+      <p>The notebook reports a strongest held-out accuracy of 0.982, with ROC AUC output around 0.967 to 0.977 across saved runs. Classical methods such as Random Forest and KNN remained competitive, which made model comparison more useful than a single-model claim.</p>
       <p>Concave points, area-related variables, and texture emerged as important signals for distinguishing malignant and benign samples.</p>
     </article>
 
     <article class="case-section surface">
-      <h2>What It Shows</h2>
+      <h2>Evaluation Framing</h2>
       <ul>
-        <li>Feature-driven modeling on sensitive, medical-style structured data.</li>
-        <li>Model comparison instead of single-model presentation.</li>
-        <li>Clear use of evaluation visuals to interpret classifier behavior.</li>
+        <li>Accuracy and ROC/AUC were used to compare model behavior on the project split.</li>
+        <li>Correlation and feature-distribution visuals helped explain why certain predictors mattered.</li>
+        <li>The result is best read as a supervised-learning case study on a public diagnostic dataset.</li>
+      </ul>
+    </article>
+
+    <article class="case-section surface">
+      <h2>Limitations and Next Steps</h2>
+      <ul>
+        <li>The dataset is compact, clean, and public, so it does not represent deployment conditions in a clinical workflow.</li>
+        <li>A stronger next pass would add repeated cross-validation, calibration review, and clearer sensitivity/specificity tradeoff analysis.</li>
+        <li>Any real diagnostic use would require clinical validation, expert review, and governance beyond this portfolio project.</li>
       </ul>
     </article>
 
@@ -82,6 +92,10 @@
         <figure>
           <img src="/portfolio/resources/cancer-malignancy/Cluster_Heatmap_Post_Dropping.png" alt="Clustered heatmap after feature dropping">
           <figcaption>Clustered heatmap of retained features.</figcaption>
+        </figure>
+        <figure>
+          <img src="/portfolio/resources/cancer-malignancy/feature_distribution_by_diagnosis.png" alt="Feature distributions comparing benign and malignant diagnosis groups">
+          <figcaption>Generated feature distributions from the project dataset.</figcaption>
         </figure>
       </div>
     </article>
